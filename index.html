@@ -228,13 +228,24 @@
                     <a href="#signup" class="toc-h2 toc-link" data-title="Authentication">Signup</a>
                   </li>
                   <li>
-                    <a href="#login" class="toc-h2 toc-link" data-title="Authentication">Login</a>
+                    <a href="#sigin" class="toc-h2 toc-link" data-title="Authentication">Sigin</a>
                   </li>
                   <li>
                     <a href="#login-with-facebook" class="toc-h2 toc-link" data-title="Authentication">Login with Facebook</a>
                   </li>
                   <li>
                     <a href="#login-with-google" class="toc-h2 toc-link" data-title="Authentication">Login with Google</a>
+                  </li>
+                  <li>
+                    <a href="#forgot-password" class="toc-h2 toc-link" data-title="Authentication">Forgot Password</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#user" class="toc-h1 toc-link" data-title="User">User</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#update-profile" class="toc-h2 toc-link" data-title="User">Update Profile</a>
                   </li>
               </ul>
           </li>
@@ -275,6 +286,165 @@ the purpose image,description &amp; agreement.</p></li>
 </ol>
 <h1 id='authentication'>Authentication</h1><h2 id='signup'>Signup</h2>
 <p>This API is used for the Signup with HonestContract application with some information.</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/signup"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>GET http://example.com/signup</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Name of the user</td>
+<td>true</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>Email address of the user</td>
+<td>true</td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td>Password of the user</td>
+<td>true</td>
+</tr>
+<tr>
+<td>confirm_password</td>
+<td>string</td>
+<td>Password of the user</td>
+<td>true</td>
+</tr>
+</tbody></table>
+
+<aside class="success">Status code :200 OK </aside>
+
+<aside class="warning">Error code : 422 Unprocessable Entity</aside>
+<h2 id='sigin'>Sigin</h2>
+<p>This API is used for the login with email and password.</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/signin"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://example.com/signin</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>Email address of the user</td>
+<td>true</td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td>Password of the user</td>
+<td>true</td>
+</tr>
+</tbody></table>
+<h2 id='login-with-facebook'>Login with Facebook</h2>
+<p>This API is used for login with Facebook. </p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/signin"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET http://example.com/signin</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>facebook</td>
+<td>boolean</td>
+<td>Facebook of the user</td>
+</tr>
+<tr>
+<td>token</td>
+<td>string</td>
+<td>Token of the user true</td>
+</tr>
+</tbody></table>
+<h2 id='login-with-google'>Login with Google</h2>
+<p>This API is used for login with Google.</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/signin"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET http://example.com/signin</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>google</td>
+<td>boolean</td>
+<td>Google of the user</td>
+</tr>
+<tr>
+<td>token</td>
+<td>string</td>
+<td>Token of the user true</td>
+</tr>
+</tbody></table>
+<h2 id='forgot-password'>Forgot Password</h2>
+<p>This API is used for forgot password.</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/forgot"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET http://example.com/forgot</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>Email address of the user</td>
+<td>true</td>
+</tr>
+</tbody></table>
+<h1 id='user'>User</h1><h2 id='update-profile'>Update Profile</h2>
+<p>This API is used for the update profile with HonestContract application with some information.</p>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/"</span>
 </code></pre>
 <blockquote>
@@ -316,15 +486,21 @@ the purpose image,description &amp; agreement.</p></li>
 <td>true</td>
 </tr>
 <tr>
-<td>street_name</td>
-<td>string</td>
-<td>Street name of the company</td>
+<td>street</td>
+<td>integer</td>
+<td>Street number of the company</td>
 <td>true</td>
 </tr>
 <tr>
 <td>unit</td>
-<td>int</td>
+<td>integer</td>
 <td>Unit of the company</td>
+<td>true</td>
+</tr>
+<tr>
+<td>street_name</td>
+<td>string</td>
+<td>Street name of the company</td>
 <td>true</td>
 </tr>
 <tr>
@@ -340,15 +516,15 @@ the purpose image,description &amp; agreement.</p></li>
 <td>true</td>
 </tr>
 <tr>
-<td>pin</td>
-<td>int</td>
-<td>Postal code of the company</td>
-<td>true</td>
-</tr>
-<tr>
 <td>country</td>
 <td>string</td>
 <td>Country name of the Company</td>
+<td>true</td>
+</tr>
+<tr>
+<td>pin</td>
+<td>int</td>
+<td>Postal code of the company</td>
 <td>true</td>
 </tr>
 <tr>
@@ -358,15 +534,15 @@ the purpose image,description &amp; agreement.</p></li>
 <td>true</td>
 </tr>
 <tr>
-<td>phone</td>
-<td>int</td>
-<td>phone number of the user</td>
-<td>true</td>
-</tr>
-<tr>
 <td>password</td>
 <td>string</td>
 <td>Password of the user</td>
+<td>true</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>int</td>
+<td>phone number of the user</td>
 <td>true</td>
 </tr>
 <tr>
@@ -380,90 +556,6 @@ the purpose image,description &amp; agreement.</p></li>
 <aside class="success">Status code :200 OK </aside>
 
 <aside class="warning">Error code : 422 Unprocessable Entity</aside>
-<h2 id='login'>Login</h2>
-<p>This API is used for the login with email and password.</p>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/</code></p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>email</td>
-<td>string</td>
-<td>Email address of the user</td>
-</tr>
-<tr>
-<td>password</td>
-<td>string</td>
-<td>Password of the user</td>
-</tr>
-</tbody></table>
-<h2 id='login-with-facebook'>Login with Facebook</h2>
-<p>This API is used for login with Facebook. </p>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET http://example.com/</code></p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>facebook</td>
-<td>boolean</td>
-<td>Facebook of the user</td>
-</tr>
-<tr>
-<td>token</td>
-<td>string</td>
-<td>Token of the user true</td>
-</tr>
-</tbody></table>
-<h2 id='login-with-google'>Login with Google</h2>
-<p>This API is used for login with Google.</p>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET http://example.com/</code></p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>google</td>
-<td>boolean</td>
-<td>Google of the user</td>
-</tr>
-<tr>
-<td>token</td>
-<td>string</td>
-<td>Token of the user true</td>
-</tr>
-</tbody></table>
 <h1 id='contracts'>Contracts</h1>
 <p>With this API he/she can create his/her contract through his/her company.</p>
 <h2 id='purpose'>Purpose</h2>
@@ -500,7 +592,7 @@ the purpose image,description &amp; agreement.</p></li>
 </tr>
 <tr>
 <td>purpose_image</td>
-<td></td>
+<td>image</td>
 <td>Units of the purpose</td>
 </tr>
 <tr>
