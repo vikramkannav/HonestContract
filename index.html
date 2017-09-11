@@ -259,6 +259,9 @@
                     <a href="#termination" class="toc-h2 toc-link" data-title="Contracts">Termination</a>
                   </li>
                   <li>
+                    <a href="#termination-2" class="toc-h2 toc-link" data-title="Contracts">Termination</a>
+                  </li>
+                  <li>
                     <a href="#renewal" class="toc-h2 toc-link" data-title="Contracts">Renewal</a>
                   </li>
               </ul>
@@ -560,63 +563,89 @@ the purpose image,description &amp; agreement.</p></li>
 <p>With this API he/she can create his/her contract through his/her company.</p>
 <h2 id='purpose'>Purpose</h2>
 <p>This API is use for create the Purpose .</p>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/puprpose"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/</code></p>
+<p><code>GET http://example.com/purpose</code></p>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
 <th>Type</th>
 <th>Description</th>
+<th>Required</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>contract_id</td>
+<td>integer</td>
+<td>Id of the contract</td>
+<td>true</td>
+</tr>
 <tr>
 <td>purpose</td>
 <td>string</td>
 <td>Purpose describe as</td>
+<td>true</td>
 </tr>
 <tr>
-<td>units</td>
-<td>string</td>
+<td>units_to_be_sold</td>
+<td>integers</td>
 <td>Units of the purpose</td>
-</tr>
-<tr>
-<td>units</td>
-<td>string</td>
-<td>Units of the purpose</td>
+<td>true</td>
 </tr>
 <tr>
 <td>purpose_image</td>
 <td>image</td>
 <td>Units of the purpose</td>
+<td>true</td>
 </tr>
 <tr>
 <td>description</td>
 <td>pdf</td>
 <td>Description of the purpose</td>
+<td>true</td>
 </tr>
 <tr>
-<td>aggrement</td>
+<td>agreement</td>
 <td>pdf</td>
 <td>Agreement of the purpose</td>
+<td>true</td>
 </tr>
 </tbody></table>
 <h2 id='termination'>Termination</h2>
 <p>This API is used for create the Termination.</p>
-<h2 id='renewal'>Renewal</h2>
-<p>This API is used for the renewal the contract.</p>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/termination"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/</code></p>
+<p><code>GET http://example.com/termination</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='termination-2'>Termination</h2>
+<p>This API is used for create the Termination.</p>
+<h2 id='renewal'>Renewal</h2>
+<p>This API is used for the renewal the contract.</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/renewal"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET http://example.com/renewal</code></p>
 
 <table><thead>
 <tr>
