@@ -242,6 +242,14 @@
               </ul>
           </li>
           <li>
+            <a href="#retrieve-access-token" class="toc-h1 toc-link" data-title="Retrieve access token">Retrieve access token</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-6" class="toc-h2 toc-link" data-title="Retrieve access token">HTTP Request</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#user" class="toc-h1 toc-link" data-title="User">User</a>
               <ul class="toc-list-h2">
                   <li>
@@ -256,6 +264,9 @@
                     <a href="#create-contract" class="toc-h2 toc-link" data-title="Contracts">Create Contract</a>
                   </li>
                   <li>
+                    <a href="#contract-list" class="toc-h2 toc-link" data-title="Contracts">Contract List</a>
+                  </li>
+                  <li>
                     <a href="#purpose" class="toc-h2 toc-link" data-title="Contracts">Purpose</a>
                   </li>
                   <li>
@@ -263,6 +274,9 @@
                   </li>
                   <li>
                     <a href="#renewal" class="toc-h2 toc-link" data-title="Contracts">Renewal</a>
+                  </li>
+                  <li>
+                    <a href="#message" class="toc-h2 toc-link" data-title="Contracts">Message</a>
                   </li>
               </ul>
           </li>
@@ -386,7 +400,7 @@ the purpose image,description &amp; agreement.</p></li>
 <tr>
 <td>facebook</td>
 <td>boolean</td>
-<td>Facebook of the user</td>
+<td>Facebook value of the user</td>
 <td>true</td>
 </tr>
 <tr>
@@ -417,7 +431,7 @@ the purpose image,description &amp; agreement.</p></li>
 <tr>
 <td>google</td>
 <td>boolean</td>
-<td>Google of the user</td>
+<td>Google value of the user</td>
 <td>true</td>
 </tr>
 <tr>
@@ -450,6 +464,31 @@ the purpose image,description &amp; agreement.</p></li>
 <td>string</td>
 <td>Email address of the user</td>
 <td>true</td>
+</tr>
+</tbody></table>
+<h1 id='retrieve-access-token'>Retrieve access token</h1>
+<p>This API is used for retrieve access token.</p>
+<pre class="highlight shell tab-shell"><code> curl <span class="s2">"http://example.com/refresh_token"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST http://example.com/refresh_token</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>refresh_token</td>
+<td>string</td>
+<td>true</td>
+<td>Refresh token of the user</td>
 </tr>
 </tbody></table>
 <h1 id='user'>User</h1><h2 id='update-profile'>Update Profile</h2>
@@ -614,6 +653,25 @@ the purpose image,description &amp; agreement.</p></li>
 <td>true</td>
 </tr>
 </tbody></table>
+<h2 id='contract-list'>Contract List</h2>
+<p>This API is used for the contracts list of the he/she(users).</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/contracts"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://example.com/contracts</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+</tbody></table>
 <h2 id='purpose'>Purpose</h2>
 <p>This API is use for create the Purpose .</p>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/contract/:id/puprpose"</span>
@@ -621,7 +679,7 @@ the purpose image,description &amp; agreement.</p></li>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-3'>HTTP Request</h3>
 <p><code>POST http://example.com/contract/:id/purpose</code></p>
 
 <table><thead>
@@ -653,7 +711,7 @@ the purpose image,description &amp; agreement.</p></li>
 <tr>
 <td>purpose_image</td>
 <td>image</td>
-<td>Units of the purpose</td>
+<td>Multiple Image of the purpose</td>
 <td>true</td>
 </tr>
 <tr>
@@ -682,7 +740,7 @@ the purpose image,description &amp; agreement.</p></li>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST http://example.com/contract/:id/termination</code></p>
 
 <table><thead>
@@ -731,7 +789,7 @@ the purpose image,description &amp; agreement.</p></li>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-5'>HTTP Request</h3>
 <p><code>POST http://example.com/contract/:id/renewal</code></p>
 
 <table><thead>
@@ -770,6 +828,37 @@ the purpose image,description &amp; agreement.</p></li>
 <td>status</td>
 <td>tinyInteger</td>
 <td>Status of the Renewal</td>
+<td>true</td>
+</tr>
+</tbody></table>
+<h2 id='message'>Message</h2>
+<p>This API is used for the message for the purpose.</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/purpose/:id/message"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST http://example.com/purpose/:id/message</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>purpose_id</td>
+<td>integer</td>
+<td>Id of the purpose</td>
+<td>true</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>Description of the message</td>
 <td>true</td>
 </tr>
 </tbody></table>
