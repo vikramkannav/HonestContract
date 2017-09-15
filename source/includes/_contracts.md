@@ -92,7 +92,7 @@ Parameter | Type    | Description | Required
 
 
 <aside class="success">status:200 OK </aside>
-<aside class="warning">status:422 Unprocessable entry.</aside>
+
 
 ## Purpose 
 This API is used for create the purpose.
