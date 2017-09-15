@@ -1,0 +1,65 @@
+{
+  "fname": "Rajesh",
+  "lname": "Kumar",
+  "company_name": "Sony",
+  "company_title": "Sony",
+  "street": "44",
+  "unit": "24",
+  "street_name": "Sec 24",
+  "city": "Gurgaon",
+  "state": "Haryana",
+  "country": "India",
+  "pin": "110021",
+  "email": "rajesh@gmail.com",
+  "phone": "9898989898",
+  "fax": "011-234446"
+}
+
+
+
+{
+  "user":
+    {
+    "fname": "Rajesh",
+    "lname": "Kumar",
+    "company_name": "Sony",
+    "company_title": "Sony",
+    "street": "44",
+    "unit": "24",
+    "street_name": "Sec 24",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "country": "India",
+    "pin": "110021",
+    "email": "rajesh@gmail.com",
+    "phone": "9898989898",
+    "fax": "011-234446"
+  },
+  "refresh_token": "ABCABCABC" ,
+  "auth_token":"DEFDEFDEF"
+}
+
+{
+"user":{
+  "name"  :"rajeshkumar",
+  "email" :"rajesh@gmail.com"
+ }
+}
+
+curl -X POST \
+http://baseurl/contract \
+-H 'accept: application/json' \
+-H 'cache-control: no-cache' \
+-H 'content-type: application/json' \
+-d '{
+{
+"contract":
+{
+"name":"Sony TV 100",
+"type":"buyer",
+"buyer_country":"India",
+"seller_country":"",
+"invitation_to":"jams",
+}}}
+
+
