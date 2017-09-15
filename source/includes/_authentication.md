@@ -250,10 +250,11 @@ http://baseurl/forget \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d '{
-{
 "users":
-{"email":"rajeshkumar@gmail.com"
-}}}
+{
+"email":"rajeshkumar@gmail.com"
+}
+}
 
  ```
 
@@ -316,7 +317,7 @@ This API is used for retrieve access token.
 		"phone": "9898989898",
 		"fax": "011-234446"
 	},
-	"refresh_token": "ABCABCABC",
+	"refresh_token": "NARNARNAR",
 	"auth_token": "DEFDEFDEF"
 }
 

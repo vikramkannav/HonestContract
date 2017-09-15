@@ -2,7 +2,7 @@
 
 ## Update Profile
 
-This API is used for the update profile with HonestContract application with some information.
+This API is used for the update profile with the HonestContract application with some information.
 
 ```shell
 curl -X POST \

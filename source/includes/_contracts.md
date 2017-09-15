@@ -11,15 +11,14 @@ http://baseurl/contract \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d '{
-{
-"contract":
+"contracts":
 {
 "name":"Sony TV 100",
 "type":"buyer",
 "buyer_country":"India",
 "seller_country":"",
 "invitation_to":"jams"
-}}}
+}}
 
  ```
 
@@ -27,7 +26,7 @@ http://baseurl/contract \
 
 ```json
 {
-	"contract": {
+	"contracts": {
 		"name": "Sony TV 100",
 		"type": "buyer",
 		"buyer_country": "India",
@@ -39,7 +38,7 @@ http://baseurl/contract \
 
 ### HTTP Request
 
-`POST http://example.com/contract`
+`POST http://baseurl/contract`
 
 
 Parameter | Type    | Description | Required
@@ -53,10 +52,16 @@ invitation_to | string | Invitation person information|true
 
 ##Contract List
 
-This API is used for the contracts list of the he/she(users).
+This API is used for the contracts list of the he/she (users).
 
 ```shell
-curl "http://example.com/contracts"
+curl -X GET \
+http://baseurl/contracts \
+-H 'accept: application/json' \
+-H 'cache-control: no-cache' \
+-H 'content-type: application/json' \
+-d '{
+}
  ```
 
 > The above command returns JSON structured like this:
@@ -64,8 +69,8 @@ curl "http://example.com/contracts"
 ```json
 
 {
-	"contract": {
-		"name": "Sony TV 100",
+	"contracts": {
+		"name": "Sony TV 100"
 		}
 }
 
@@ -75,30 +80,57 @@ curl "http://example.com/contracts"
 
 ### HTTP Request
 
-`GET http://example.com/contracts`
+`GET http://baseurl/contracts`
 
 
 Parameter | Type    | Description | Required
 --------- | ------- | ----------- |-----------
+          |         |             | 
+          |         |             |
 
 
 
 
 ## Purpose 
-This API is use for create the Purpose .
+This API is used for create the purpose.
 
 ```shell
-curl "http://example.com/contract/:id/puprpose"
+curl -X POST \
+http://baseurl/contract/:id/purpose \
+-H 'accept: application/json' \
+-H 'cache-control: no-cache' \
+-H 'content-type: application/json' \
+-d '{
+"purposes" : {
+"contract_id":"2",
+"purpose":"Remote TV",
+"units_to_be_sold":"20",
+"purpose_image":"Remote.png",
+"description":"description.pdf"",
+"agreement":"agreement.pdf",
+"status":""
+}}
  ```
 
 > The above command returns JSON structured like this:
 
 ```json
+{
+	"purpose": {
+		"contract_id": "2",
+		"purpose": "Remote TV",
+		"units_to_be_sold": "20",
+		"purpose_image": "Remote.png",
+		"description": "description.pdf",
+		"agreement": "agreement.pdf",
+		"status": ""
+	}
+}
 ```
 
 ### HTTP Request
 
-`POST http://example.com/contract/:id/purpose`
+`POST http://baseurl/contract/:id/purpose`
 
 
 Parameter | Type    | Description | Required
@@ -116,17 +148,39 @@ status     | tinyInteger | Status of the purpose | true
 This API is used for create the termination of the contract.
 
 ```shell
-curl "http://example.com/contract/:id/termination"
+curl -X POST \
+http://baseurl/contract/:id/termination \
+-H 'accept: application/json' \
+-H 'cache-control: no-cache' \
+-H 'content-type: application/json' \
+-d '{
+"terminations" :{
+"contract_id":"",
+"terminated_by":"",
+"inform_days":"",
+"status":"",
+"status":""
+ }
+}
  ```
 
 > The above command returns JSON structured like this:
 
 ```json
+{
+"terminations":{
+"contract_id":"",
+"terminated_by":"",
+"inform_days":"",
+"status":"",
+"status":""
+ }
+}
 ```
 
 ### HTTP Request
 
-`POST http://example.com/contract/:id/termination`
+`POST http://baseurl/contract/:id/termination`
 
 
 Parameter | Type    | Description | Required 
@@ -146,19 +200,41 @@ status     | tinyInteger | Status of the termination | true
 This API is used for the renewal the contract.
 
 ```shell
-curl "http://example.com/contract/:id/renewal"
- ```
+curl -X POST \
+http://baseurl/contract/:id/renewal \
+-H 'accept: application/json' \
+-H 'cache-control: no-cache' \
+-H 'content-type: application/json' \
+-d '{
+"renewal":{
+"contract_id":"",
+"type":"",
+"informed_period":"",
+"inform_days":"",
+"status":""
+ }
+}
+```
 
 
 > The above command returns JSON structured like this:
 
 ```json
+{
+	"renewal": {
+		"contract_id": "",
+		"type": "",
+		"informed_period": "",
+		"inform_days": "",
+		"status": ""
+	}
+}
 ```
 
 
 ### HTTP Request
 
-`POST http://example.com/contract/:id/renewal`
+`POST http://baseurl/contract/:id/renewal`
 
 
 Parameter | Type     | Description | Required
@@ -175,19 +251,38 @@ status     | tinyInteger | Status of the Renewal | true
 This API is used for the message for the purpose.
 
 ```shell
-curl "http://example.com/purpose/:id/message"
+curl -X POST \
+http://baseurl/purpose/:id/message\
+-H 'accept: application/json' \
+-H 'cache-control: no-cache' \
+-H 'content-type: application/json' \
+-d '{
+{
+  "messgae":{
+  "description":"message";
+ }
+}
+
+
  ```
 
 
 > The above command returns JSON structured like this:
 
 ```json
+{
+  "messgae":{
+  "description":"message"
+ }
+}
+
+
 ```
 
 
 ### HTTP Request
 
-`POST http://example.com/purpose/:id/message`
+`POST http://baseurl/purpose/:id/message`
 
 
 Parameter | Type     | Description | Required

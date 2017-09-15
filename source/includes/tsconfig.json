@@ -47,19 +47,60 @@
 }
 
 curl -X POST \
-http://baseurl/contract \
+http://example.com/purpose/:id/message\
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d '{
 {
-"contract":
+  "messgae":{
+  "description":"message";
+ }
+}
+
+
+
+
+
+
+
+
+
+
 {
-"name":"Sony TV 100",
-"type":"buyer",
-"buyer_country":"India",
-"seller_country":"",
-"invitation_to":"jams",
-}}}
+"renewal":{
+"contract_id":"",
+"type":"",
+"informed_period":"",
+"inform_days":"",
+"status":""
+ }
+}
 
 
+contract_id | integer | Id of the contract | true
+type        | json    | Renewal type of contract| true
+informed_period| integer| Renewal Informed period time | true
+inform_days |  integer | Renewal Inform days | true
+status     | tinyInteger | Status of the Renewal | true
+
+
+
+
+
+
+contract_id 	integer 	Id of the contract 	true
+purpose 	string 	Purpose description 	true
+units_to_be_sold 	integers 	Units of the purpose 	true
+purpose_image 	image 	Multiple Image of the purpose 	true
+description 	pdf 	Description of the purpose 	true
+agreement 	pdf 	Agreement of the purpose 	true
+status 	tinyInteger 	Status of the purpose 	true
+
+
+
+contract_id | integer | Id of the contract   | true
+terminated_by| enum   | Terminated by options|
+target_not_meet| enum | Target not meet option|
+inform_days | integer| Inform days of termination|
+status     | tinyInteger | Status of the termination | true
