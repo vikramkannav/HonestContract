@@ -12,13 +12,12 @@ This API is used for the Signup with HonestContract application with some inform
 -H 'content-type: application/json' \
 -d '{
 "users" :{
-"name" :"rajeshkumar",
+"name":"rajeshkumar",
 "email": "rajeshkumar@gmail.com",
+"password":"******"
 }
 }'
-
- ```
-
+```
 
 > The above command returns JSON structured like this:
 
@@ -39,10 +38,10 @@ This API is used for the Signup with HonestContract application with some inform
 		"pin": "",
 		"email": "",
 		"phone": "",
-		"fax": ""
-	},
-	"refresh_token": "ABCABCABC",
-	"auth_token": "DEFDEFDEF"
+		"fax": "",
+        "refresh_token": "ABCABCABC",
+        "auth_token": "DEFDEFDEF"
+	}
 }
 
 ```
@@ -76,8 +75,8 @@ http://baseurl/signin \
 -H 'content-type: application/json' \
 -d '{
 "users" :{
-"name" :"rajeshkumar",
 "email": "rajeshkumar@gmail.com",
+"password" :"********",
 }
 }'
 
@@ -163,11 +162,11 @@ http://baseurl/signin \
 		"pin": "",
 		"email": "",
 		"phone": "",
-		"fax": ""
-	},
-	"refresh_token": "ABCABCABC",
-	"auth_token": "DEFDEFDEF"
-}
+		"fax": "",
+		"refresh_token": "ABCABCABC",
+       	"auth_token": "DEFDEFDEF"
+     	}
+}	
 
 ```
 
@@ -223,10 +222,10 @@ http://baseurl/signin \
 		"pin": "",
 		"email": "",
 		"phone": "",
-		"fax": ""
-	},
-	"refresh_token": "ABCABCABC",
-	"auth_token": "DEFDEFDEF"
+		"fax": "",
+		"refresh_token": "ABCABCABC",
+       	"auth_token": "DEFDEFDEF"
+	}
 }
 ```
 
@@ -234,7 +233,6 @@ http://baseurl/signin \
 ### HTTP Request
 
 `POST http://baseurl/signin`
-
 
 Parameter | Type    | Description | Required 
 --------- | ------- | ----------- |----------
@@ -323,10 +321,10 @@ This API is used for retrieve access token.
 		"pin": "110021",
 		"email": "rajesh@gmail.com",
 		"phone": "9898989898",
-		"fax": "011-234446"
-	},
-	"refresh_token": "NARNARNAR",
-	"auth_token": "DEFDEFDEF"
+		"fax": "011-234446",
+        "refresh_token": "NARNARNAR",
+         "auth_token": "DEFDEFDEF" 
+	}
 }
 
 ```
