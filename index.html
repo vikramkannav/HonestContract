@@ -305,11 +305,11 @@ the purpose image,description &amp; agreement.</p></li>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
 -d <span class="s1">'{
 "users" :{
-"name" :"rajeshkumar",
+"name":"rajeshkumar",
 "email": "rajeshkumar@gmail.com",
+"password":"******"
 }
 }'</span>
-
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -330,10 +330,10 @@ the purpose image,description &amp; agreement.</p></li>
         </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
@@ -385,8 +385,8 @@ http://baseurl/signin <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
 -d <span class="s1">'{
 "users" :{
-"name" :"rajeshkumar",
 "email": "rajeshkumar@gmail.com",
+"password" :"********",
 }
 }'</span>
 
@@ -477,11 +477,11 @@ http://baseurl/signin <span class="se">\</span>
         </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
-</span><span class="p">}</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">   
 
 </span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
 <p><code>POST http://baseurl/signin</code></p>
@@ -544,10 +544,10 @@ http://baseurl/signin <span class="se">\</span>
         </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST http://baseurl/signin</code></p>
@@ -652,10 +652,10 @@ http://baseurl/forget <span class="se">\</span>
         </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"110021"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajesh@gmail.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9898989898"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"011-234446"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NARNARNAR"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"011-234446"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NARNARNAR"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w"> 
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
