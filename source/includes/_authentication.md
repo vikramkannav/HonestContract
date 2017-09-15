@@ -122,7 +122,8 @@ Parameter | Type    | Description | Required
 email     |  string | Email address of the user|true
 password  |  string | Password of the user|true
 
-
+<aside class="success">status:200 OK </aside>
+<aside class="warning">status:422 Unprocessable entry.</aside>
 
 ## Login with Facebook
 
@@ -181,6 +182,8 @@ Parameter | Type    | Description | Required
 facebook  | boolean | Facebook value of the user	| true
 token	  | string	| Token of the user	true | true	
 
+<aside class="success">status:200 OK </aside>
+<aside class="warning">status:422 Unprocessable entry.</aside>
 
 ## Login with Google
 
@@ -238,6 +241,8 @@ Parameter | Type    | Description | Required
 google    | boolean | Google value of the user | true	
 token	  | string	| Token of the user	true | true
 
+<aside class="success">status:200 OK </aside>
+<aside class="warning">status:422 Unprocessable entry.</aside>
 
 ## Forgot Password
 
@@ -276,6 +281,9 @@ http://baseurl/forget \
 Parameter | Type    | Description | Required 
 --------- | ------- | -----------|------------
 email	|string	   |Email address of the user |	true
+
+<aside class="success">status:200 OK </aside>
+<aside class="warning">status:422 Unprocessable entry.</aside>
 
 
 ##Retrieve access token
@@ -332,3 +340,6 @@ This API is used for retrieve access token.
 Parameter | Type    | Description | Required 
 --------- | ------- | -----------|------------
 refresh_token| string |	true  |Refresh token of the user	
+
+<aside class="success">status:200 OK </aside>
+<aside class="warning">status:422 Unprocessable entry.</aside>

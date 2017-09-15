@@ -1,7 +1,6 @@
 # Contracts
 
 ##Create Contract
-
 With this API he/she can create his/her contract through his/her company.
 
 ```shell
@@ -19,8 +18,7 @@ http://baseurl/contract \
 "seller_country":"",
 "invitation_to":"jams"
 }}
-
- ```
+```
 
 > The above command returns JSON structured like this:
 
@@ -48,6 +46,10 @@ type| string  | Type seller or buyer | true
 buyer_country |string | Buyer country name | true
 seller_country | string| Seller Country name | true
 invitation_to | string | Invitation person information|true 
+
+
+<aside class="success">status:200 OK </aside>
+<aside class="warning">status:422 Unprocessable entry.</aside>
 
 
 ##Contract List
@@ -89,7 +91,8 @@ Parameter | Type    | Description | Required
           |         |             |
 
 
-
+<aside class="success">status:200 OK </aside>
+<aside class="warning">status:422 Unprocessable entry.</aside>
 
 ## Purpose 
 This API is used for create the purpose.
@@ -143,6 +146,9 @@ description  | pdf | Description of the purpose | true
 agreement | pdf | Agreement of the purpose  | true
 status     | tinyInteger | Status of the purpose | true
 
+<aside class="success">status:200 OK </aside>
+<aside class="warning">status:422 Unprocessable entry.</aside>
+
 ## Termination
 
 This API is used for create the termination of the contract.
@@ -192,7 +198,8 @@ inform_days | integer| Inform days of termination|
 status     | tinyInteger | Status of the termination | true
             
 
-
+<aside class="success">status:200 OK </aside>
+<aside class="warning">status:422 Unprocessable entry.</aside>
 
 
 ## Renewal
@@ -245,6 +252,8 @@ informed_period| integer| Renewal Informed period time | true
 inform_days |  integer | Renewal Inform days | true
 status     | tinyInteger | Status of the Renewal | true
 
+<aside class="success">status:200 OK </aside>
+<aside class="warning">status:422 Unprocessable entry.</aside>
 
 ## Message
 
@@ -289,3 +298,6 @@ Parameter | Type     | Description | Required
 --------- | ---------| -----------|-------------
 purpose_id | integer | Id of the purpose | true
 description| string | Description of the message | true
+
+<aside class="success">status:200 OK </aside>
+<aside class="warning">status:422 Unprocessable entry.</aside>
