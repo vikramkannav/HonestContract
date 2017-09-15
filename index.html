@@ -298,13 +298,46 @@ the purpose image,description &amp; agreement.</p></li>
 </ol>
 <h1 id='authentication'>Authentication</h1><h2 id='signup'>Signup</h2>
 <p>This API is used for the Signup with HonestContract application with some information.</p>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/signup"</span>
+<pre class="highlight shell tab-shell"><code> curl -X POST <span class="se">\</span>
+ http://baseurl/signup <span class="se">\</span>
+-H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
+-H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+-H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+-d <span class="s1">'{
+"users" :{
+"name" :"rajeshkumar",
+"email": "rajeshkumar@gmail.com",
+}
+}'</span>
+
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://example.com/signup</code></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST http://baseurl/signup</code></p>
 
 <table><thead>
 <tr>
@@ -345,13 +378,46 @@ the purpose image,description &amp; agreement.</p></li>
 <aside class="warning">Error code : 422 Unprocessable Entity</aside>
 <h2 id='sigin'>Sigin</h2>
 <p>This API is used for the login with email and password.</p>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/signin"</span>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+http://baseurl/signin <span class="se">\</span>
+-H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
+-H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+-H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+-d <span class="s1">'{
+"users" :{
+"name" :"rajeshkumar",
+"email": "rajeshkumar@gmail.com",
+}
+}'</span>
+
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST http://example.com/signin</code></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST http://baseurl/signin</code></p>
 
 <table><thead>
 <tr>
@@ -376,13 +442,45 @@ the purpose image,description &amp; agreement.</p></li>
 </tbody></table>
 <h2 id='login-with-facebook'>Login with Facebook</h2>
 <p>This API is used for login with Facebook. </p>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/signin"</span>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+http://baseurl/signin <span class="se">\</span>
+-H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
+-H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+-H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+-d <span class="s1">'{
+"users" :{
+"facebook" :"true",
+"token": "facebooktoken",
+ }
+}'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST http://example.com/signin</code></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST http://baseurl/signin</code></p>
 
 <table><thead>
 <tr>
@@ -407,13 +505,44 @@ the purpose image,description &amp; agreement.</p></li>
 </tbody></table>
 <h2 id='login-with-google'>Login with Google</h2>
 <p>This API is used for login with Google.</p>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/signin"</span>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+http://baseurl/signin <span class="se">\</span>
+-H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
+-H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+-H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+-d <span class="s1">'{
+"users" :{
+"google" :"true",
+"token": "googletoken",
+ }
+}'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-4'>HTTP Request</h3>
-<p><code>POST http://example.com/signin</code></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>POST http://baseurl/signin</code></p>
 
 <table><thead>
 <tr>
@@ -438,13 +567,26 @@ the purpose image,description &amp; agreement.</p></li>
 </tbody></table>
 <h2 id='forgot-password'>Forgot Password</h2>
 <p>This API is used for forgot password.</p>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/forgot"</span>
-</code></pre>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+http://baseurl/forget <span class="se">\</span>
+-H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
+-H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+-H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+-d <span class="s1">'{
+{
+"users":
+{"email":"rajeshkumar@gmail.com"
+}}}
+
+</span></code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>POST http://example.com/forgot</code></p>
+<pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+   </span><span class="s2">"message"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password sent on your email"</span><span class="w"> 
+ </span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>POST http://baseurl/forgot</code></p>
 
 <table><thead>
 <tr>
@@ -463,13 +605,44 @@ the purpose image,description &amp; agreement.</p></li>
 </tbody></table>
 <h2 id='retrieve-access-token'>Retrieve access token</h2>
 <p>This API is used for retrieve access token.</p>
-<pre class="highlight shell tab-shell"><code> curl <span class="s2">"http://example.com/refresh_token"</span>
+<pre class="highlight shell tab-shell"><code> curl -X POST <span class="se">\</span>
+ http://baseurl/refresh_token <span class="se">\</span>
+ -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
+ -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+ -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+ -d <span class="s1">'{
+ "users" :{
+ "refresh_token" :"ABCABCABC",
+  }
+ }'</span>
+
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-6'>HTTP Request</h3>
-<p><code>POST http://example.com/refresh_token</code></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rajesh"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kumar"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"44"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sec 24"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gurgaon"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Haryana"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"India"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"110021"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajesh@gmail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9898989898"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"011-234446"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST http://baseurl/refresh_token</code></p>
 
 <table><thead>
 <tr>
@@ -488,13 +661,57 @@ the purpose image,description &amp; agreement.</p></li>
 </tbody></table>
 <h1 id='user'>User</h1><h2 id='update-profile'>Update Profile</h2>
 <p>This API is used for the update profile with HonestContract application with some information.</p>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/"</span>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+http://baseurl/forget <span class="se">\</span>
+-H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
+-H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+-H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+-d <span class="s1">'{
+{
+  "user":
+    {
+    "fname": "Rajesh",
+    "lname": "Kumar",
+    "company_name": "Sony",
+    "company_title": "Sony",
+    "street": "44",
+    "unit": "24",
+    "street_name": "Sec 24",
+    "city": "Gurgaon",
+    "state": "Haryana",
+    "country": "India",
+    "pin": "110021",
+    "email": "rajesh@gmail.com",
+    "phone": "9898989898",
+    "fax": "011-234446"
+  }
+}
+}'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://example.com/</code></p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rajesh"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kumar"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"company_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"44"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"street_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sec 24"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gurgaon"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Haryana"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"India"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"110021"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajesh@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9898989898"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"011-234446"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST http://baseurl/user</code></p>
 
 <table><thead>
 <tr>
@@ -523,7 +740,7 @@ the purpose image,description &amp; agreement.</p></li>
 <td>true</td>
 </tr>
 <tr>
-<td>Company_title</td>
+<td>company_title</td>
 <td>string</td>
 <td>Title of the company</td>
 <td>true</td>
@@ -601,12 +818,36 @@ the purpose image,description &amp; agreement.</p></li>
 <aside class="warning">Error code : 422 Unprocessable Entity</aside>
 <h1 id='contracts'>Contracts</h1><h2 id='create-contract'>Create Contract</h2>
 <p>With this API he/she can create his/her contract through his/her company.</p>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/contract"</span>
-</code></pre>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+http://baseurl/contract <span class="se">\</span>
+-H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
+-H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+-H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+-d <span class="s1">'{
+{
+"contract":
+{
+"name":"Sony TV 100",
+"type":"buyer",
+"buyer_country":"India",
+"seller_country":"",
+"invitation_to":"jams"
+}}}
+
+</span></code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request'>HTTP Request</h3>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"contract"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony TV 100"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buyer"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"India"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"invitation_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jams"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST http://example.com/contract</code></p>
 
 <table><thead>
@@ -655,7 +896,16 @@ the purpose image,description &amp; agreement.</p></li>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"contract"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony TV 100"</span><span class="p">,</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+
+
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET http://example.com/contracts</code></p>
 
 <table><thead>
