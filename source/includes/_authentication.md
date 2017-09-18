@@ -11,7 +11,7 @@ This API is used for the Signup with HonestContract application with some inform
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d '{
-"users" :{
+"user" :{
 "name":"rajeshkumar",
 "email": "rajeshkumar@gmail.com",
 "password":"******"
@@ -23,7 +23,7 @@ This API is used for the Signup with HonestContract application with some inform
 
 ```json
 {
-	"users": {
+	"user": {
 		"name": "rajeshkumar",
 		"fname": "",
 		"lname": "",
@@ -74,7 +74,7 @@ http://baseurl/signin \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d '{
-"users" :{
+"user" :{
 "email": "rajeshkumar@gmail.com",
 "password" :"********",
 }
@@ -87,7 +87,7 @@ http://baseurl/signin \
 
 ```json
 {
-	"users": {
+	"user": {
 		"name": "rajeshkumar",
 		"fname": "",
 		"lname": "",
@@ -102,10 +102,10 @@ http://baseurl/signin \
 		"pin": "",
 		"email": "",
 		"phone": "",
-		"fax": ""
-	},
-	"refresh_token": "ABCABCABC",
-	"auth_token": "DEFDEFDEF"
+		"fax": "",
+		"refresh_token": "ABCABCABC",
+        "auth_token": "DEFDEFDEF"
+	}
 }
 
 ```
@@ -135,7 +135,7 @@ http://baseurl/signin \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d '{
-"users" :{
+"user" :{
 "facebook" :"true",
 "token": "facebooktoken",
  }
@@ -147,7 +147,7 @@ http://baseurl/signin \
 
 ```json
 {
-	"users": {
+	"user": {
 		"name": "rajeshkumar",
 		"fname": "",
 		"lname": "",
@@ -195,7 +195,7 @@ http://baseurl/signin \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d '{
-"users" :{
+"user" :{
 "google" :"true",
 "token": "googletoken",
  }
@@ -207,7 +207,7 @@ http://baseurl/signin \
 
 ```json
 {
-	"users": {
+	"user": {
 		"name": "rajeshkumar",
 		"fname": "",
 		"lname": "",
@@ -248,12 +248,12 @@ This API is used for forgot password.
 
 ```shell
 curl -X POST \
-http://baseurl/forget \
+http://baseurl/retreive-password\
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d '{
-"users":
+"user":
 {
 "email":"rajeshkumar@gmail.com"
 }
@@ -273,7 +273,7 @@ http://baseurl/forget \
 
 ### HTTP Request
 
-`POST http://baseurl/forgot`
+`POST http://baseurl/retreive-password`
 
 
 Parameter | Type    | Description | Required 
@@ -295,7 +295,7 @@ This API is used for retrieve access token.
  -H 'cache-control: no-cache' \
  -H 'content-type: application/json' \
  -d '{
- "users" :{
+ "user" :{
  "refresh_token" :"ABCABCABC",
   }
  }'
@@ -307,7 +307,7 @@ This API is used for retrieve access token.
 
 ```json
 {
-	"users": {
+	"user": {
 		"fname": "Rajesh",
 		"lname": "Kumar",
 		"company_name": "Sony",
@@ -323,7 +323,7 @@ This API is used for retrieve access token.
 		"phone": "9898989898",
 		"fax": "011-234446",
         "refresh_token": "NARNARNAR",
-         "auth_token": "DEFDEFDEF" 
+        "auth_token": "DEFDEFDEF" 
 	}
 }
 

@@ -10,7 +10,7 @@ http://baseurl/contract \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d '{
-"contracts":
+"contract":
 {
 "name":"Sony TV 100",
 "type":"buyer",
@@ -24,7 +24,7 @@ http://baseurl/contract \
 
 ```json
 {
-	"contracts": {
+	"contract": {
 		"name": "Sony TV 100",
 		"type": "buyer",
 		"buyer_country": "India",
@@ -54,7 +54,7 @@ invitation_to | string | Invitation person information|true
 
 ##Contract List
 
-This API is used for the contracts list of the he/she (users).
+This API is used for the contracts list of the he/she (user).
 
 ```shell
 curl -X GET \
@@ -69,14 +69,23 @@ http://baseurl/contracts \
 > The above command returns JSON structured like this:
 
 ```json
-
 {
-	"contracts": {
-		"name": "Sony TV 100"
+	"contracts": [{
+			"name": "Sony TV 100",
+			"type": "buyer",
+			"buyer_country": "India",
+			"seller_country": "",
+			"invitation_to": "jams"
+		},
+		{
+			"name": "LG TV 50",
+			"type": "buyer",
+			"buyer_country": "India",
+			"seller_country": "",
+			"invitation_to": "Raymond"
 		}
+	]
 }
-
-
 
 ```
 
@@ -138,7 +147,6 @@ http://baseurl/contract/:id/purpose \
 
 Parameter | Type    | Description | Required
 --------- | ------- | ----------- |-----------
-contract_id | integer | Id of the contract | true
 purpose    |  string | Purpose description | true
 units_to_be_sold| integers  | Units of the purpose | true
 purpose_image| image | Multiple Image of the purpose| true
@@ -162,7 +170,7 @@ http://baseurl/contract/:id/termination \
 -d '{
 "terminations" :{
 "contract_id":"",
-"terminated_by":"",
+"terminated_type":"",
 "inform_days":"",
 "status":"",
 "status":""
@@ -176,9 +184,9 @@ http://baseurl/contract/:id/termination \
 {
 "terminations":{
 "contract_id":"",
-"terminated_by":"",
+"terminated_type":"",
+"target_not_meet":"",
 "inform_days":"",
-"status":"",
 "status":""
  }
 }
@@ -191,8 +199,7 @@ http://baseurl/contract/:id/termination \
 
 Parameter | Type    | Description | Required 
 --------- | ------- | ----------- |--------
-contract_id | integer | Id of the contract   | true
-terminated_by| enum   | Terminated by options|
+terminated_type| enum   | Terminated type by options|
 target_not_meet| enum | Target not meet option|
 inform_days | integer| Inform days of termination|
 status     | tinyInteger | Status of the termination | true
@@ -246,7 +253,6 @@ http://baseurl/contract/:id/renewal \
 
 Parameter | Type     | Description | Required
 --------- | ---------| -----------|-------------
-contract_id | integer | Id of the contract | true
 type        | json    | Renewal type of contract| true
 informed_period| integer| Renewal Informed period time | true
 inform_days |  integer | Renewal Inform days | true
