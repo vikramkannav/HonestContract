@@ -335,7 +335,11 @@ the purpose image,description &amp; agreement.</p></li>
         </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-
+</span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"Please enter the correct email address."</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST http://baseurl/signup</code></p>
 
@@ -415,7 +419,11 @@ http://baseurl/signin <span class="se">\</span>
         </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-
+</span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"Please enter the correct email address."</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
 <p><code>POST http://baseurl/signin</code></p>
 
@@ -482,7 +490,11 @@ http://baseurl/signin <span class="se">\</span>
         </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
         </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">   
-
+</span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"Email and password not correct"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
 <p><code>POST http://baseurl/signin</code></p>
 
@@ -598,6 +610,11 @@ http://baseurl/retreive-password<span class="se">\</span>
 <pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
    </span><span class="s2">"message"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password sent on your email"</span><span class="w"> 
  </span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"This email is not register. Please sign up."</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
 <p><code>POST http://baseurl/retreive-password</code></p>
 
@@ -657,7 +674,6 @@ http://baseurl/retreive-password<span class="se">\</span>
         </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w"> 
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-
 </span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
 <p><code>POST http://baseurl/refresh_token</code></p>
 
