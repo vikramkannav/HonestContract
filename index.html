@@ -592,7 +592,7 @@ http://baseurl/signin <span class="se">\</span>
 <h2 id='forgot-password'>Forgot Password</h2>
 <p>This API is used for forgot password.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/retreive-password<span class="se">\</span>
+http://baseurl/reset-password<span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -616,7 +616,7 @@ http://baseurl/retreive-password<span class="se">\</span>
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>POST http://baseurl/retreive-password</code></p>
+<p><code>POST http://baseurl/reset-password</code></p>
 
 <table><thead>
 <tr>
@@ -994,7 +994,6 @@ http://baseurl/contract/:id/purpose <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
 -d <span class="s1">'{
 "purposes" : {
-"contract_id":"2",
 "purpose":"Remote TV",
 "units_to_be_sold":"20",
 "purpose_image":"Remote.png",
@@ -1008,7 +1007,6 @@ http://baseurl/contract/:id/purpose <span class="se">\</span>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"purpose"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"contract_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"purpose"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Remote TV"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"units_to_be_sold"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"purpose_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Remote.png"</span><span class="p">,</span><span class="w">
@@ -1078,8 +1076,8 @@ http://baseurl/contract/:id/termination <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
 -d <span class="s1">'{
 "terminations" :{
-"contract_id":"",
 "terminated_type":"",
+"target_not_meet":"",
 "inform_days":"",
 "status":"",
 "status":""
@@ -1091,7 +1089,6 @@ http://baseurl/contract/:id/termination <span class="se">\</span>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
 </span><span class="s2">"terminations"</span><span class="p">:{</span><span class="w">
-</span><span class="s2">"contract_id"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
 </span><span class="s2">"terminated_type"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
 </span><span class="s2">"target_not_meet"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
 </span><span class="s2">"inform_days"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -1147,7 +1144,6 @@ http://baseurl/contract/:id/renewal <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
 -d <span class="s1">'{
 "renewal":{
-"contract_id":"",
 "type":"",
 "informed_period":"",
 "inform_days":"",
@@ -1160,7 +1156,6 @@ http://baseurl/contract/:id/renewal <span class="se">\</span>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"renewal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"contract_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"informed_period"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"inform_days"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -1231,8 +1226,6 @@ http://baseurl/purpose/:id/message<span class="se">\</span>
   </span><span class="s2">"description"</span><span class="p">:</span><span class="s2">"message"</span><span class="w">
  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-
-
 </span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
 <p><code>POST http://baseurl/purpose/:id/message</code></p>
 
@@ -1244,12 +1237,6 @@ http://baseurl/purpose/:id/message<span class="se">\</span>
 <th>Required</th>
 </tr>
 </thead><tbody>
-<tr>
-<td>purpose_id</td>
-<td>integer</td>
-<td>Id of the purpose</td>
-<td>true</td>
-</tr>
 <tr>
 <td>description</td>
 <td>string</td>
