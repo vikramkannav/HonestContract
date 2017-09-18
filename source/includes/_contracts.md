@@ -114,7 +114,6 @@ http://baseurl/contract/:id/purpose \
 -H 'content-type: application/json' \
 -d '{
 "purposes" : {
-"contract_id":"2",
 "purpose":"Remote TV",
 "units_to_be_sold":"20",
 "purpose_image":"Remote.png",
@@ -129,7 +128,6 @@ http://baseurl/contract/:id/purpose \
 ```json
 {
 	"purpose": {
-		"contract_id": "2",
 		"purpose": "Remote TV",
 		"units_to_be_sold": "20",
 		"purpose_image": "Remote.png",
@@ -169,8 +167,8 @@ http://baseurl/contract/:id/termination \
 -H 'content-type: application/json' \
 -d '{
 "terminations" :{
-"contract_id":"",
 "terminated_type":"",
+"target_not_meet":"",
 "inform_days":"",
 "status":"",
 "status":""
@@ -183,7 +181,6 @@ http://baseurl/contract/:id/termination \
 ```json
 {
 "terminations":{
-"contract_id":"",
 "terminated_type":"",
 "target_not_meet":"",
 "inform_days":"",
@@ -221,7 +218,6 @@ http://baseurl/contract/:id/renewal \
 -H 'content-type: application/json' \
 -d '{
 "renewal":{
-"contract_id":"",
 "type":"",
 "informed_period":"",
 "inform_days":"",
@@ -236,8 +232,7 @@ http://baseurl/contract/:id/renewal \
 ```json
 {
 	"renewal": {
-		"contract_id": "",
-		"type": "",
+	    "type": "",
 		"informed_period": "",
 		"inform_days": "",
 		"status": ""
@@ -290,8 +285,6 @@ http://baseurl/purpose/:id/message\
   "description":"message"
  }
 }
-
-
 ```
 
 
@@ -302,7 +295,6 @@ http://baseurl/purpose/:id/message\
 
 Parameter | Type     | Description | Required
 --------- | ---------| -----------|-------------
-purpose_id | integer | Id of the purpose | true
 description| string | Description of the message | true
 
 <aside class="success">status:200 OK </aside>

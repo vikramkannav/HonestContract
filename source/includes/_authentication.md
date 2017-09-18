@@ -269,7 +269,7 @@ This API is used for forgot password.
 
 ```shell
 curl -X POST \
-http://baseurl/retreive-password\
+http://baseurl/reset-password\
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -300,7 +300,7 @@ http://baseurl/retreive-password\
 
 ### HTTP Request
 
-`POST http://baseurl/retreive-password`
+`POST http://baseurl/reset-password`
 
 
 Parameter | Type    | Description | Required 
