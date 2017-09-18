@@ -304,7 +304,7 @@ the purpose image,description &amp; agreement.</p></li>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
 -d <span class="s1">'{
-"users" :{
+"user" :{
 "name":"rajeshkumar",
 "email": "rajeshkumar@gmail.com",
 "password":"******"
@@ -315,7 +315,7 @@ the purpose image,description &amp; agreement.</p></li>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -384,7 +384,7 @@ http://baseurl/signin <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
 -d <span class="s1">'{
-"users" :{
+"user" :{
 "email": "rajeshkumar@gmail.com",
 "password" :"********",
 }
@@ -395,7 +395,7 @@ http://baseurl/signin <span class="se">\</span>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -410,10 +410,10 @@ http://baseurl/signin <span class="se">\</span>
         </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
@@ -452,7 +452,7 @@ http://baseurl/signin <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
 -d <span class="s1">'{
-"users" :{
+"user" :{
 "facebook" :"true",
 "token": "facebooktoken",
  }
@@ -462,7 +462,7 @@ http://baseurl/signin <span class="se">\</span>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -519,7 +519,7 @@ http://baseurl/signin <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
 -d <span class="s1">'{
-"users" :{
+"user" :{
 "google" :"true",
 "token": "googletoken",
  }
@@ -529,7 +529,7 @@ http://baseurl/signin <span class="se">\</span>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -580,12 +580,12 @@ http://baseurl/signin <span class="se">\</span>
 <h2 id='forgot-password'>Forgot Password</h2>
 <p>This API is used for forgot password.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/forget <span class="se">\</span>
+http://baseurl/retreive-password<span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
 -d <span class="s1">'{
-"users":
+"user":
 {
 "email":"rajeshkumar@gmail.com"
 }
@@ -599,7 +599,7 @@ http://baseurl/forget <span class="se">\</span>
    </span><span class="s2">"message"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password sent on your email"</span><span class="w"> 
  </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>POST http://baseurl/forgot</code></p>
+<p><code>POST http://baseurl/retreive-password</code></p>
 
 <table><thead>
 <tr>
@@ -628,7 +628,7 @@ http://baseurl/forget <span class="se">\</span>
  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
  -d <span class="s1">'{
- "users" :{
+ "user" :{
  "refresh_token" :"ABCABCABC",
   }
  }'</span>
@@ -638,7 +638,7 @@ http://baseurl/forget <span class="se">\</span>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"users"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rajesh"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kumar"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony"</span><span class="p">,</span><span class="w">
@@ -654,7 +654,7 @@ http://baseurl/forget <span class="se">\</span>
         </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9898989898"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"011-234446"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NARNARNAR"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w"> 
+        </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w"> 
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
@@ -845,7 +845,7 @@ http://baseurl/contract <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
 -d <span class="s1">'{
-"contracts":
+"contract":
 {
 "name":"Sony TV 100",
 "type":"buyer",
@@ -858,7 +858,7 @@ http://baseurl/contract <span class="se">\</span>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"contract"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony TV 100"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buyer"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"India"</span><span class="p">,</span><span class="w">
@@ -913,7 +913,7 @@ http://baseurl/contract <span class="se">\</span>
 
 <aside class="warning">status:422 Unprocessable entry.</aside>
 <h2 id='contract-list'>Contract List</h2>
-<p>This API is used for the contracts list of the he/she (users).</p>
+<p>This API is used for the contracts list of the he/she (user).</p>
 <pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
 http://baseurl/contracts <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
@@ -925,14 +925,23 @@ http://baseurl/contracts <span class="se">\</span>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="w">
-</span><span class="p">{</span><span class="w">
-    </span><span class="s2">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony TV 100"</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony TV 100"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buyer"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"India"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"invitation_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jams"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LG TV 50"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buyer"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"India"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"invitation_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Raymond"</span><span class="w">
         </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-
-
 
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET http://baseurl/contracts</code></p>
@@ -1004,12 +1013,6 @@ http://baseurl/contract/:id/purpose <span class="se">\</span>
 </tr>
 </thead><tbody>
 <tr>
-<td>contract_id</td>
-<td>integer</td>
-<td>Id of the contract</td>
-<td>true</td>
-</tr>
-<tr>
 <td>purpose</td>
 <td>string</td>
 <td>Purpose description</td>
@@ -1060,7 +1063,7 @@ http://baseurl/contract/:id/termination <span class="se">\</span>
 -d <span class="s1">'{
 "terminations" :{
 "contract_id":"",
-"terminated_by":"",
+"terminated_type":"",
 "inform_days":"",
 "status":"",
 "status":""
@@ -1073,9 +1076,9 @@ http://baseurl/contract/:id/termination <span class="se">\</span>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
 </span><span class="s2">"terminations"</span><span class="p">:{</span><span class="w">
 </span><span class="s2">"contract_id"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
-</span><span class="s2">"terminated_by"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"terminated_type"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="s2">"target_not_meet"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
 </span><span class="s2">"inform_days"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
-</span><span class="s2">"status"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
 </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">""</span><span class="w">
  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -1091,15 +1094,9 @@ http://baseurl/contract/:id/termination <span class="se">\</span>
 </tr>
 </thead><tbody>
 <tr>
-<td>contract_id</td>
-<td>integer</td>
-<td>Id of the contract</td>
-<td>true</td>
-</tr>
-<tr>
-<td>terminated_by</td>
+<td>terminated_type</td>
 <td>enum</td>
-<td>Terminated by options</td>
+<td>Terminated type by options</td>
 <td></td>
 </tr>
 <tr>
@@ -1165,12 +1162,6 @@ http://baseurl/contract/:id/renewal <span class="se">\</span>
 <th>Required</th>
 </tr>
 </thead><tbody>
-<tr>
-<td>contract_id</td>
-<td>integer</td>
-<td>Id of the contract</td>
-<td>true</td>
-</tr>
 <tr>
 <td>type</td>
 <td>json</td>
