@@ -180,7 +180,7 @@ http://baseurl/contract/:id/termination \
 
 ```json
 {
-"terminations":{
+"termination":{
 "terminated_type":"",
 "target_not_meet":"",
 "inform_days":"",
