@@ -43,8 +43,18 @@ This API is used for the Signup with HonestContract application with some inform
         "auth_token": "DEFDEFDEF"
 	}
 }
-
 ```
+
+
+
+```json
+{
+  "error": [
+    "Please enter the correct email address."
+  ]
+}
+```
+
 
 
 ### HTTP Request
@@ -107,9 +117,15 @@ http://baseurl/signin \
         "auth_token": "DEFDEFDEF"
 	}
 }
-
 ```
 
+```json
+{
+  "error": [
+    "Please enter the correct email address."
+  ]
+}
+```
 
 ### HTTP Request
 
@@ -167,9 +183,14 @@ http://baseurl/signin \
        	"auth_token": "DEFDEFDEF"
      	}
 }	
-
 ```
-
+```json
+{
+  "error": [
+    "Email and password not correct"
+  ]
+}
+```
 
 ### HTTP Request
 
@@ -269,7 +290,13 @@ http://baseurl/retreive-password\
    "message" : "Password sent on your email" 
  }
 ```
-
+```json
+{
+  "error": [
+    "This email is not register. Please sign up."
+  ]
+}
+```
 
 ### HTTP Request
 
@@ -326,8 +353,8 @@ This API is used for retrieve access token.
         "auth_token": "DEFDEFDEF" 
 	}
 }
-
 ```
+
 
 
 ### HTTP Request
