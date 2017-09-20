@@ -207,12 +207,12 @@ Parameter | Type    | Description | Required
 --------- | ------- | ----------- |--------
 units_sold| integer | Units to be sold |
 price_per_unit |  integer | Price per unit  |
-discount_percentage | integer | Discount given |
-taxes |  integer | Amount of tax |
-shipping_cost | integer | Amount for shipping cost|
-total_price | integer | Total price with tax and discount|
-export_charge | tinyInteger | Export charge paid by
-import_charge |tinyInteger | Import charge paid by
+discount_percentage | integer | Discount percentage |
+taxes |  integer | Buyer pay the tax to seller|
+shipping_cost | integer | Shipping amount pay by buyer|
+total_price | integer | Total price with price with tax & discount|
+export_charge | tinyInteger | Export charge responsibility
+import_charge |tinyInteger | Import charge responsibility
 terms  |  pdf    | Term document of payment & price
 status |tinyInteger |Status of the product and price
 
@@ -261,7 +261,6 @@ http://baseurl/contract/:id/payment \
 
 `POST http://baseurl/contract/:id/payment`
 
-
 Parameter | Type    | Description | Required 
 --------- | ------- | ----------- |--------
 timing_payment|tinyInteger| Timing payment option |
@@ -287,9 +286,19 @@ http://baseurl/contract/:id/payment \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d ' {
- 	"shipping": {
-  	}
- }
+     	"shipping": {
+     		"shipping_time": "2",
+     		"shipping_time_other": "",
+     		"purpose_title": "1",
+     		"transport_option": "2",
+     		"shipping_cost": "200",
+     		"destination": "destination address",
+     		"insurance_amount": "24",
+     		"freight": "",
+     		"shipping_instruction": "",
+     		"status": "1"
+     	}
+     }
 ```
 
 > The above command returns JSON structured like this:
@@ -297,6 +306,16 @@ http://baseurl/contract/:id/payment \
 ```json
 {
 	"shipping": {
+		"shipping_time": "2",
+		"shipping_time_other": "",
+		"purpose_title": "1",
+		"transport_option": "2",
+		"shipping_cost": "200",
+		"destination": "destination address",
+		"insurance_amount": "24",
+		"freight": "",
+		"shipping_instruction": "",
+		"status": "1"
 	}
 }
  ```
