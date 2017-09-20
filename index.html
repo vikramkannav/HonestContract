@@ -265,13 +265,16 @@
                     <a href="#purpose" class="toc-h2 toc-link" data-title="Contracts">Purpose</a>
                   </li>
                   <li>
-                    <a href="#termination" class="toc-h2 toc-link" data-title="Contracts">Termination</a>
+                    <a href="#product-amp-price" class="toc-h2 toc-link" data-title="Contracts">Product &amp; Price</a>
                   </li>
                   <li>
-                    <a href="#renewal" class="toc-h2 toc-link" data-title="Contracts">Renewal</a>
+                    <a href="#payment" class="toc-h2 toc-link" data-title="Contracts">Payment</a>
                   </li>
                   <li>
-                    <a href="#message" class="toc-h2 toc-link" data-title="Contracts">Message</a>
+                    <a href="#shipping" class="toc-h2 toc-link" data-title="Contracts">Shipping</a>
+                  </li>
+                  <li>
+                    <a href="#final-agreement" class="toc-h2 toc-link" data-title="Contracts">Final Agreement</a>
                   </li>
               </ul>
           </li>
@@ -863,11 +866,12 @@ http://baseurl/contract <span class="se">\</span>
 -d <span class="s1">'{
 "contract":
 {
-"name":"Sony TV 100",
-"type":"buyer",
-"buyer_country":"India",
-"seller_country":"",
-"invitation_to":"jams"
+        "name": "Sony TV 100",
+        "buyer_id": "1",
+        "seller_id": "2",
+        "buyer_country":"India",
+        "seller_country":"China",
+        "status": "1"
 }}
 </span></code></pre>
 <blockquote>
@@ -875,11 +879,12 @@ http://baseurl/contract <span class="se">\</span>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"contract"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony TV 100"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buyer"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"India"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"invitation_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jams"</span><span class="w">
+         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony TV 100"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"buyer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"seller_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="s2">"India"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="s2">"China"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
@@ -897,30 +902,6 @@ http://baseurl/contract <span class="se">\</span>
 <td>name</td>
 <td>string</td>
 <td>Name of the contract</td>
-<td>true</td>
-</tr>
-<tr>
-<td>type</td>
-<td>string</td>
-<td>Type seller or buyer</td>
-<td>true</td>
-</tr>
-<tr>
-<td>buyer_country</td>
-<td>string</td>
-<td>Buyer country name</td>
-<td>true</td>
-</tr>
-<tr>
-<td>seller_country</td>
-<td>string</td>
-<td>Seller Country name</td>
-<td>true</td>
-</tr>
-<tr>
-<td>invitation_to</td>
-<td>string</td>
-<td>Invitation person information</td>
 <td>true</td>
 </tr>
 </tbody></table>
@@ -943,18 +924,20 @@ http://baseurl/contracts <span class="se">\</span>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony TV 100"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buyer"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"India"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"invitation_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jams"</span><span class="w">
+         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sony TV 100"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"buyer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"seller_seller"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="s2">"India"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="s2">"China"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LG TV 50"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buyer"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"India"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"invitation_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Raymond"</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LG TV 50"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"buyer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"seller_seller"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="s2">"India"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -998,8 +981,7 @@ http://baseurl/contract/:id/purpose <span class="se">\</span>
 "units_to_be_sold":"20",
 "purpose_image":"Remote.png",
 "description":"description.pdf"",
-"agreement":"agreement.pdf",
-"status":""
+"status":"1"
 }}
 </span></code></pre>
 <blockquote>
@@ -1011,8 +993,7 @@ http://baseurl/contract/:id/purpose <span class="se">\</span>
         </span><span class="s2">"units_to_be_sold"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"purpose_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Remote.png"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"description.pdf"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"agreement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"agreement.pdf"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
@@ -1051,12 +1032,6 @@ http://baseurl/contract/:id/purpose <span class="se">\</span>
 <td>true</td>
 </tr>
 <tr>
-<td>agreement</td>
-<td>pdf</td>
-<td>Agreement of the purpose</td>
-<td>true</td>
-</tr>
-<tr>
 <td>status</td>
 <td>tinyInteger</td>
 <td>Status of the purpose</td>
@@ -1067,36 +1042,47 @@ http://baseurl/contract/:id/purpose <span class="se">\</span>
 <aside class="success">status:200 OK </aside>
 
 <aside class="warning">status:422 Unprocessable entry.</aside>
-<h2 id='termination'>Termination</h2>
-<p>This API is used for create the termination of the contract.</p>
+<h2 id='product-amp-price'>Product &amp; Price</h2>
+<p>This API is used for product and price of the contract.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/contract/:id/termination <span class="se">\</span>
+http://baseurl/contract/:id/product_price <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
--d <span class="s1">'{
-"terminations" :{
-"terminated_type":"",
-"target_not_meet":"",
-"inform_days":"",
-"status":"",
-"status":""
- }
-}
+-d <span class="s1">' {
+        "product_price": {
+            "units_sold": "15",
+            "price_per_unit": "100",
+            "discount_percentage": "10",
+            "taxes_amount": "2",
+            "shipping_cost": "20",
+            "total_price": "147",
+            "export_charge": "buyer",
+            "import_charge": "buyer &amp; seller",
+            "terms": "document.pdf",
+            "status": "1"
+        }
+     }
 </span></code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-</span><span class="s2">"termination"</span><span class="p">:{</span><span class="w">
-</span><span class="s2">"terminated_type"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
-</span><span class="s2">"target_not_meet"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
-</span><span class="s2">"inform_days"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
-</span><span class="s2">"status"</span><span class="p">:</span><span class="s2">""</span><span class="w">
- </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"product_price"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"units_sold"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price_per_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"discount_percentage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"taxes_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"shipping_cost"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"total_price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"147"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"export_charge"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buyer"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"import_charge"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buyer &amp; seller"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"terms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"document.pdf"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
-<p><code>POST http://baseurl/contract/:id/termination</code></p>
+<p><code>POST http://baseurl/contract/:id/product_price</code></p>
 
 <table><thead>
 <tr>
@@ -1107,63 +1093,103 @@ http://baseurl/contract/:id/termination <span class="se">\</span>
 </tr>
 </thead><tbody>
 <tr>
-<td>terminated_type</td>
-<td>enum</td>
-<td>Terminated type by options</td>
-<td></td>
-</tr>
-<tr>
-<td>target_not_meet</td>
-<td>enum</td>
-<td>Target not meet option</td>
-<td></td>
-</tr>
-<tr>
-<td>inform_days</td>
+<td>units_sold</td>
 <td>integer</td>
-<td>Inform days of termination</td>
+<td>Units to be sold</td>
+<td></td>
+</tr>
+<tr>
+<td>price_per_unit</td>
+<td>integer</td>
+<td>Price per unit</td>
+<td></td>
+</tr>
+<tr>
+<td>discount_percentage</td>
+<td>integer</td>
+<td>Discount percentage</td>
+<td></td>
+</tr>
+<tr>
+<td>taxes</td>
+<td>integer</td>
+<td>Buyer pay the tax to seller</td>
+<td></td>
+</tr>
+<tr>
+<td>shipping_cost</td>
+<td>integer</td>
+<td>Shipping amount pay by buyer</td>
+<td></td>
+</tr>
+<tr>
+<td>total_price</td>
+<td>integer</td>
+<td>Total price with price with tax &amp; discount</td>
+<td></td>
+</tr>
+<tr>
+<td>export_charge</td>
+<td>tinyInteger</td>
+<td>Export charge responsibility</td>
+<td></td>
+</tr>
+<tr>
+<td>import_charge</td>
+<td>tinyInteger</td>
+<td>Import charge responsibility</td>
+<td></td>
+</tr>
+<tr>
+<td>terms</td>
+<td>pdf</td>
+<td>Term document of payment &amp; price</td>
 <td></td>
 </tr>
 <tr>
 <td>status</td>
 <td>tinyInteger</td>
-<td>Status of the termination</td>
-<td>true</td>
+<td>Status of the product and price</td>
+<td></td>
 </tr>
 </tbody></table>
 
 <aside class="success">status:200 OK </aside>
 
 <aside class="warning">status:422 Unprocessable entry.</aside>
-<h2 id='renewal'>Renewal</h2>
-<p>This API is used for the renewal the contract.</p>
+<h2 id='payment'>Payment</h2>
+<p>This API is used for payment of the contract.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/contract/:id/renewal <span class="se">\</span>
+http://baseurl/contract/:id/payment <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
--d <span class="s1">'{
-"renewal":{
-"type":"",
-"informed_period":"",
-"inform_days":"",
-"status":""
+-d <span class="s1">' {
+    "payment": {
+        "timing_payment": "3",
+        "timing_other": "",
+        "late_charge": "",
+        "payment_method": "2",
+        "payment_other":"" ,
+        "status": "1"
+    }
  }
-}
 </span></code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"renewal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"informed_period"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"inform_days"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="s2">"payment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"timing_payment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"timing_other"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"late_charge"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"payment_other"</span><span class="p">:</span><span class="s2">""</span><span class="w"> </span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>POST http://baseurl/contract/:id/renewal</code></p>
+<p><code>POST http://baseurl/contract/:id/payment</code></p>
 
 <table><thead>
 <tr>
@@ -1174,60 +1200,87 @@ http://baseurl/contract/:id/renewal <span class="se">\</span>
 </tr>
 </thead><tbody>
 <tr>
-<td>type</td>
-<td>json</td>
-<td>Renewal type of contract</td>
-<td>true</td>
+<td>timing_payment</td>
+<td>tinyInteger</td>
+<td>Timing payment option</td>
+<td></td>
 </tr>
 <tr>
-<td>informed_period</td>
-<td>integer</td>
-<td>Renewal Informed period time</td>
-<td>true</td>
+<td>timing_other</td>
+<td>string</td>
+<td>Timing other payment option</td>
+<td></td>
 </tr>
 <tr>
-<td>inform_days</td>
+<td>late_charge</td>
 <td>integer</td>
-<td>Renewal Inform days</td>
-<td>true</td>
+<td>Late charges in payment</td>
+<td></td>
+</tr>
+<tr>
+<td>payment_method</td>
+<td>tinyInteger</td>
+<td>Payment method</td>
+<td></td>
+</tr>
+<tr>
+<td>payment_other</td>
+<td>string</td>
+<td>Payment other Method</td>
+<td></td>
 </tr>
 <tr>
 <td>status</td>
 <td>tinyInteger</td>
-<td>Status of the Renewal</td>
-<td>true</td>
+<td>Status of payment</td>
+<td></td>
 </tr>
 </tbody></table>
 
 <aside class="success">status:200 OK </aside>
 
 <aside class="warning">status:422 Unprocessable entry.</aside>
-<h2 id='message'>Message</h2>
-<p>This API is used for the message for the purpose.</p>
+<h2 id='shipping'>Shipping</h2>
+<p>This API is used for shiping of the contract.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/purpose/:id/message<span class="se">\</span>
+http://baseurl/contract/:id/payment <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
--d <span class="s1">'{
-{
-  "messgae":{
-  "description":"message";
- }
-}
-
-
+-d <span class="s1">' {
+        "shipping": {
+            "shipping_time": "2",
+            "shipping_time_other": "",
+            "purpose_title": "1",
+            "transport_option": "2",
+            "shipping_cost": "200",
+            "destination": "destination address",
+            "insurance_amount": "24",
+            "freight": "",
+            "shipping_instruction": "",
+            "status": "1"
+        }
+     }
 </span></code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"messgae"</span><span class="p">:{</span><span class="w">
-  </span><span class="s2">"description"</span><span class="p">:</span><span class="s2">"message"</span><span class="w">
- </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"shipping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"shipping_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"shipping_time_other"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"purpose_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"transport_option"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"shipping_cost"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"destination address"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"insurance_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"freight"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"shipping_instruction"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
-<p><code>POST http://baseurl/purpose/:id/message</code></p>
+<p><code>POST http://baseurl/contract/:id/payment</code></p>
 
 <table><thead>
 <tr>
@@ -1238,10 +1291,153 @@ http://baseurl/purpose/:id/message<span class="se">\</span>
 </tr>
 </thead><tbody>
 <tr>
-<td>description</td>
+<td>shipping_time</td>
+<td>tinyInteger</td>
+<td>Shipping time option</td>
+<td></td>
+</tr>
+<tr>
+<td>shipping_time_other</td>
 <td>string</td>
-<td>Description of the message</td>
-<td>true</td>
+<td>Shipping time other option</td>
+<td></td>
+</tr>
+<tr>
+<td>purpose_title</td>
+<td>tinyInteger</td>
+<td>Purpose of title</td>
+<td></td>
+</tr>
+<tr>
+<td>transport_option</td>
+<td>tinyInteger</td>
+<td>Transport option</td>
+<td></td>
+</tr>
+<tr>
+<td>shipping_cost</td>
+<td>integer</td>
+<td>Buyer pay shipping cost</td>
+<td></td>
+</tr>
+<tr>
+<td>destination</td>
+<td>string</td>
+<td>Destination of the shipping</td>
+<td></td>
+</tr>
+<tr>
+<td>insurance_amount</td>
+<td>integer</td>
+<td>Insure loss up following amount</td>
+<td></td>
+</tr>
+<tr>
+<td>freight</td>
+<td>string</td>
+<td>Freight</td>
+<td>Freight option</td>
+</tr>
+<tr>
+<td>shipping_instruction</td>
+<td>pdf</td>
+<td>Shipping instruction</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td>tinyInteger</td>
+<td>Status of shipping</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<aside class="success">status:200 OK </aside>
+
+<aside class="warning">status:422 Unprocessable entry.</aside>
+<h2 id='final-agreement'>Final Agreement</h2>
+<p>This API is used for the final agreement of the contract.</p>
+<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
+http://baseurl/contract/:id/final <span class="se">\</span>
+-H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
+-H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
+-H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
+-d <span class="s1">' {
+    "final": {
+    }
+ }
+</span></code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"final"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
+<p><code>POST http://baseurl/contract/:id/final</code></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>event_of_breach</td>
+<td>boolean</td>
+<td>Event breach option</td>
+<td></td>
+</tr>
+<tr>
+<td>liability_option</td>
+<td>tinyInteger</td>
+<td>Liability option of the final</td>
+<td></td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td>Agreement follow country law</td>
+<td></td>
+</tr>
+<tr>
+<td>state</td>
+<td>string</td>
+<td>Agreement follow state law</td>
+<td></td>
+</tr>
+<tr>
+<td>binding_arbitation</td>
+<td>tinyInteger</td>
+<td>Arbitation following body</td>
+<td></td>
+</tr>
+<tr>
+<td>litigation_by</td>
+<td>tinyInteger</td>
+<td>Litigation option</td>
+<td></td>
+</tr>
+<tr>
+<td>dispute_arising</td>
+<td>boolean</td>
+<td>Any dispute arising</td>
+<td></td>
+</tr>
+<tr>
+<td>additional_term</td>
+<td>pdf</td>
+<td>Additional term option</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td>tinyInteger</td>
+<td>Status of payment</td>
+<td></td>
 </tr>
 </tbody></table>
 
