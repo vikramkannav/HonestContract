@@ -308,7 +308,7 @@ the purpose image,description &amp; agreement.</p></li>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
 -d <span class="s1">'{
 "user" :{
-"name":"rajeshkumar",
+"fname":"rajeshkumar",
 "email": "rajeshkumar@gmail.com",
 "password":"******"
 }
@@ -319,8 +319,7 @@ the purpose image,description &amp; agreement.</p></li>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"company_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -333,10 +332,10 @@ the purpose image,description &amp; agreement.</p></li>
         </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">       
+    </span><span class="p">},</span><span class="w">
+     </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -355,7 +354,7 @@ the purpose image,description &amp; agreement.</p></li>
 </tr>
 </thead><tbody>
 <tr>
-<td>name</td>
+<td>fname</td>
 <td>string</td>
 <td>Name of the user</td>
 <td>true</td>
@@ -403,8 +402,7 @@ http://baseurl/api/signin <span class="se">\</span>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"company_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -417,10 +415,10 @@ http://baseurl/api/signin <span class="se">\</span>
         </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -474,8 +472,7 @@ http://baseurl/api/signin <span class="se">\</span>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"company_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -488,10 +485,10 @@ http://baseurl/api/signin <span class="se">\</span>
         </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
         </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">   
 </span></code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -545,8 +542,7 @@ http://baseurl/api/signin <span class="se">\</span>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"fname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajeshkumar"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"lname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"company_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -559,10 +555,10 @@ http://baseurl/api/signin <span class="se">\</span>
         </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
         </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">   
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABCABCABC"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST http://baseurl/api/signin</code></p>
@@ -672,10 +668,10 @@ http://baseurl/api/reset-password<span class="se">\</span>
         </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"110021"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rajesh@gmail.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9898989898"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"011-234446"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NARNARNAR"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w"> 
-    </span><span class="p">}</span><span class="w">
+        </span><span class="s2">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"011-234446"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+     </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NARNARNAR"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"auth_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFDEFDEF"</span><span class="w"> 
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
 <p><code>POST http://baseurl/api/refresh_token</code></p>
@@ -871,6 +867,7 @@ http://baseurl/api/contract <span class="se">\</span>
         "seller_id": "2",
         "buyer_country":"India",
         "seller_country":"China",
+        "created_by":"1",
         "status": "1"
 }}
 </span></code></pre>
@@ -884,6 +881,7 @@ http://baseurl/api/contract <span class="se">\</span>
          </span><span class="s2">"seller_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
          </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="s2">"India"</span><span class="p">,</span><span class="w">
          </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="s2">"China"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"created_by"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
          </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -929,6 +927,7 @@ http://baseurl/api/contracts <span class="se">\</span>
           </span><span class="s2">"seller_seller"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="s2">"India"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="s2">"China"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"created_by"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
@@ -936,9 +935,10 @@ http://baseurl/api/contracts <span class="se">\</span>
            </span><span class="s2">"buyer_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
            </span><span class="s2">"seller_seller"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
            </span><span class="s2">"buyer_country"</span><span class="p">:</span><span class="s2">"India"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"seller_country"</span><span class="p">:</span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"created_by"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
@@ -1241,7 +1241,7 @@ http://baseurl/api/contract/:id/payment <span class="se">\</span>
 
 <aside class="warning">status:422 Unprocessable entry.</aside>
 <h2 id='shipping'>Shipping</h2>
-<p>This API is used for shiping of the contract.</p>
+<p>This API is used for shipping of the contract.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
 http://baseurl/api/contract/:id/payment <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
