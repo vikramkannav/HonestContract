@@ -6,7 +6,7 @@ This API is used for the update profile with the HonestContract application with
 
 ```shell
 curl -X POST \
-http://baseurl/api/forget \
+http://baseurl/api/user \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
