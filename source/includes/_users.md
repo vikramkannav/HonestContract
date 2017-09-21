@@ -5,7 +5,7 @@
 This API is used for the update profile with the HonestContract application with some information.
 
 ```shell
-curl -X POST \
+curl -X PUT \
 http://baseurl/api/user \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
@@ -61,7 +61,7 @@ http://baseurl/api/user \
 
 ### HTTP Request
 
-`POST http://baseurl/api/user`
+`PUT http://baseurl/api/user`
 
 
 Parameter | Type    | Description | Required
