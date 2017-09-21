@@ -17,6 +17,7 @@ http://baseurl/api/contract \
 		"seller_id": "2",
 		"buyer_country":"India",
         "seller_country":"China",
+        "created_by":"1",
 		"status": "1"
 }}
 ```
@@ -31,6 +32,7 @@ http://baseurl/api/contract \
          "seller_id": "2",
          "buyer_country":"India",
          "seller_country":"China",
+         "created_by":"1",
          "status": "1"
 	}
 }
@@ -75,6 +77,7 @@ http://baseurl/api/contracts \
           "seller_seller": "2",
           "buyer_country":"India",
           "seller_country":"China",
+          "created_by":"1",
           "status": "1"
 		},
 		{
@@ -82,9 +85,10 @@ http://baseurl/api/contracts \
 		   "buyer_id": "1",
            "seller_seller": "4",
            "buyer_country":"India",
-            "seller_country":"US",
+           "seller_country":"US",
+           "created_by":"1",
             "status": "1"
-		}
+	  		}
 	]
 }
 
@@ -277,7 +281,7 @@ status| tinyInteger | Status of payment |
 
 ## Shipping
 
-This API is used for shiping of the contract.
+This API is used for shipping of the contract.
 
 ```shell
 curl -X POST \

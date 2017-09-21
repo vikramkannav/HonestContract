@@ -12,7 +12,7 @@ This API is used for the Signup with HonestContract application with some inform
 -H 'content-type: application/json' \
 -d '{
 "user" :{
-"name":"rajeshkumar",
+"fname":"rajeshkumar",
 "email": "rajeshkumar@gmail.com",
 "password":"******"
 }
@@ -24,8 +24,7 @@ This API is used for the Signup with HonestContract application with some inform
 ```json
 {
 	"user": {
-		"name": "rajeshkumar",
-		"fname": "",
+		"fname": "rajeshkumar",
 		"lname": "",
 		"company_name": "",
 		"company_title": "",
@@ -38,10 +37,10 @@ This API is used for the Signup with HonestContract application with some inform
 		"pin": "",
 		"email": "",
 		"phone": "",
-		"fax": "",
-        "refresh_token": "ABCABCABC",
-        "auth_token": "DEFDEFDEF"
-	}
+		"fax": ""       
+	},
+	 "refresh_token": "ABCABCABC",
+      "auth_token": "DEFDEFDEF"
 }
 ```
 
@@ -64,7 +63,7 @@ This API is used for the Signup with HonestContract application with some inform
 
 Parameter | Type    | Description | Required
 --------- | ------- | ----------- | -----------
-name     | string   | Name of the user | true
+fname     | string   | Name of the user | true
 email     | string  | Email address of the user | true
 password  |  string | Password of the user | true
 confirm_password  |  string | Password of the user | true
@@ -98,8 +97,7 @@ http://baseurl/api/signin \
 ```json
 {
 	"user": {
-		"name": "rajeshkumar",
-		"fname": "",
+		"fname": "rajeshkumar",
 		"lname": "",
 		"company_name": "",
 		"company_title": "",
@@ -112,10 +110,10 @@ http://baseurl/api/signin \
 		"pin": "",
 		"email": "",
 		"phone": "",
-		"fax": "",
-		"refresh_token": "ABCABCABC",
-        "auth_token": "DEFDEFDEF"
-	}
+		"fax": ""
+		},
+	"refresh_token": "ABCABCABC",
+    "auth_token": "DEFDEFDEF"
 }
 ```
 
@@ -164,8 +162,7 @@ http://baseurl/api/signin \
 ```json
 {
 	"user": {
-		"name": "rajeshkumar",
-		"fname": "",
+		"fname": "rajeshkumar",
 		"lname": "",
 		"company_name": "",
 		"company_title": "",
@@ -178,10 +175,10 @@ http://baseurl/api/signin \
 		"pin": "",
 		"email": "",
 		"phone": "",
-		"fax": "",
-		"refresh_token": "ABCABCABC",
-       	"auth_token": "DEFDEFDEF"
-     	}
+		"fax": ""
+     	},
+     	"refresh_token": "ABCABCABC",
+        "auth_token": "DEFDEFDEF"
 }	
 ```
 ```json
@@ -229,8 +226,7 @@ http://baseurl/api/signin \
 ```json
 {
 	"user": {
-		"name": "rajeshkumar",
-		"fname": "",
+		"fname": "rajeshkumar",
 		"lname": "",
 		"company_name": "",
 		"company_title": "",
@@ -243,10 +239,10 @@ http://baseurl/api/signin \
 		"pin": "",
 		"email": "",
 		"phone": "",
-		"fax": "",
-		"refresh_token": "ABCABCABC",
-       	"auth_token": "DEFDEFDEF"
-	}
+		"fax": ""	
+	},
+	"refresh_token": "ABCABCABC",
+     "auth_token": "DEFDEFDEF"
 }
 ```
 
@@ -348,10 +344,10 @@ This API is used for retrieve access token.
 		"pin": "110021",
 		"email": "rajesh@gmail.com",
 		"phone": "9898989898",
-		"fax": "011-234446",
-        "refresh_token": "NARNARNAR",
-        "auth_token": "DEFDEFDEF" 
-	}
+		"fax": "011-234446"
+    	},
+     "refresh_token": "NARNARNAR",
+     "auth_token": "DEFDEFDEF" 
 }
 ```
 
