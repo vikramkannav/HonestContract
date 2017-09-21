@@ -302,7 +302,7 @@ the purpose image,description &amp; agreement.</p></li>
 <h1 id='authentication'>Authentication</h1><h2 id='signup'>Signup</h2>
 <p>This API is used for the Signup with HonestContract application with some information.</p>
 <pre class="highlight shell tab-shell"><code> curl -X POST <span class="se">\</span>
- http://baseurl/signup <span class="se">\</span>
+ http://baseurl/api/signup <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -344,7 +344,7 @@ the purpose image,description &amp; agreement.</p></li>
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://baseurl/signup</code></p>
+<p><code>POST http://baseurl/api/signup</code></p>
 
 <table><thead>
 <tr>
@@ -386,7 +386,7 @@ the purpose image,description &amp; agreement.</p></li>
 <h2 id='sigin'>Sigin</h2>
 <p>This API is used for the login with email and password.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/signin <span class="se">\</span>
+http://baseurl/api/signin <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -428,7 +428,7 @@ http://baseurl/signin <span class="se">\</span>
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST http://baseurl/signin</code></p>
+<p><code>POST http://baseurl/api/signin</code></p>
 
 <table><thead>
 <tr>
@@ -458,7 +458,7 @@ http://baseurl/signin <span class="se">\</span>
 <h2 id='login-with-facebook'>Login with Facebook</h2>
 <p>This API is used for login with Facebook. </p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/signin <span class="se">\</span>
+http://baseurl/api/signin <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -499,7 +499,7 @@ http://baseurl/signin <span class="se">\</span>
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST http://baseurl/signin</code></p>
+<p><code>POST http://baseurl/api/signin</code></p>
 
 <table><thead>
 <tr>
@@ -529,7 +529,7 @@ http://baseurl/signin <span class="se">\</span>
 <h2 id='login-with-google'>Login with Google</h2>
 <p>This API is used for login with Google.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/signin <span class="se">\</span>
+http://baseurl/api/signin <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -565,7 +565,7 @@ http://baseurl/signin <span class="se">\</span>
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
-<p><code>POST http://baseurl/signin</code></p>
+<p><code>POST http://baseurl/api/signin</code></p>
 
 <table><thead>
 <tr>
@@ -595,7 +595,7 @@ http://baseurl/signin <span class="se">\</span>
 <h2 id='forgot-password'>Forgot Password</h2>
 <p>This API is used for forgot password.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/reset-password<span class="se">\</span>
+http://baseurl/api/reset-password<span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -619,7 +619,7 @@ http://baseurl/reset-password<span class="se">\</span>
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>POST http://baseurl/reset-password</code></p>
+<p><code>POST http://baseurl/api/reset-password</code></p>
 
 <table><thead>
 <tr>
@@ -643,7 +643,7 @@ http://baseurl/reset-password<span class="se">\</span>
 <h2 id='retrieve-access-token'>Retrieve access token</h2>
 <p>This API is used for retrieve access token.</p>
 <pre class="highlight shell tab-shell"><code> curl -X POST <span class="se">\</span>
- http://baseurl/refresh_token <span class="se">\</span>
+ http://baseurl/api/refresh_token <span class="se">\</span>
  -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
  -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
  -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -678,7 +678,7 @@ http://baseurl/reset-password<span class="se">\</span>
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
-<p><code>POST http://baseurl/refresh_token</code></p>
+<p><code>POST http://baseurl/api/refresh_token</code></p>
 
 <table><thead>
 <tr>
@@ -702,7 +702,7 @@ http://baseurl/reset-password<span class="se">\</span>
 <h1 id='user'>User</h1><h2 id='update-profile'>Update Profile</h2>
 <p>This API is used for the update profile with the HonestContract application with some information.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/forget <span class="se">\</span>
+http://baseurl/api/forget <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -751,7 +751,7 @@ http://baseurl/forget <span class="se">\</span>
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://baseurl/user</code></p>
+<p><code>POST http://baseurl/api/user</code></p>
 
 <table><thead>
 <tr>
@@ -859,7 +859,7 @@ http://baseurl/forget <span class="se">\</span>
 <h1 id='contracts'>Contracts</h1><h2 id='create-contract'>Create Contract</h2>
 <p>With this API he/she can create his/her contract through his/her company.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/contract <span class="se">\</span>
+http://baseurl/api/contract <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -888,7 +888,7 @@ http://baseurl/contract <span class="se">\</span>
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://baseurl/contract</code></p>
+<p><code>POST http://baseurl/api/contract</code></p>
 
 <table><thead>
 <tr>
@@ -912,7 +912,7 @@ http://baseurl/contract <span class="se">\</span>
 <h2 id='contract-list'>Contract List</h2>
 <p>This API is used for the contracts list of the he/she (user).</p>
 <pre class="highlight shell tab-shell"><code>curl -X GET <span class="se">\</span>
-http://baseurl/contracts <span class="se">\</span>
+http://baseurl/api/contracts <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -943,7 +943,7 @@ http://baseurl/contracts <span class="se">\</span>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://baseurl/contracts</code></p>
+<p><code>GET http://baseurl/api/contracts</code></p>
 
 <table><thead>
 <tr>
@@ -971,7 +971,7 @@ http://baseurl/contracts <span class="se">\</span>
 <h2 id='purpose'>Purpose</h2>
 <p>This API is used for create the purpose.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/contract/:id/purpose <span class="se">\</span>
+http://baseurlapi/contract/:id/purpose <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -997,7 +997,7 @@ http://baseurl/contract/:id/purpose <span class="se">\</span>
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST http://baseurl/contract/:id/purpose</code></p>
+<p><code>POST http://baseurl/api/contract/:id/purpose</code></p>
 
 <table><thead>
 <tr>
@@ -1045,7 +1045,7 @@ http://baseurl/contract/:id/purpose <span class="se">\</span>
 <h2 id='product-amp-price'>Product &amp; Price</h2>
 <p>This API is used for product and price of the contract.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/contract/:id/product_price <span class="se">\</span>
+http://baseurl/api/contract/:id/product_price <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -1082,7 +1082,7 @@ http://baseurl/contract/:id/product_price <span class="se">\</span>
         </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
-<p><code>POST http://baseurl/contract/:id/product_price</code></p>
+<p><code>POST http://baseurl/api/contract/:id/product_price</code></p>
 
 <table><thead>
 <tr>
@@ -1160,7 +1160,7 @@ http://baseurl/contract/:id/product_price <span class="se">\</span>
 <h2 id='payment'>Payment</h2>
 <p>This API is used for payment of the contract.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/contract/:id/payment <span class="se">\</span>
+http://baseurl/api/contract/:id/payment <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -1189,7 +1189,7 @@ http://baseurl/contract/:id/payment <span class="se">\</span>
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>POST http://baseurl/contract/:id/payment</code></p>
+<p><code>POST http://baseurl/api/contract/:id/payment</code></p>
 
 <table><thead>
 <tr>
@@ -1243,7 +1243,7 @@ http://baseurl/contract/:id/payment <span class="se">\</span>
 <h2 id='shipping'>Shipping</h2>
 <p>This API is used for shiping of the contract.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/contract/:id/payment <span class="se">\</span>
+http://baseurl/api/contract/:id/payment <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -1280,7 +1280,7 @@ http://baseurl/contract/:id/payment <span class="se">\</span>
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
-<p><code>POST http://baseurl/contract/:id/payment</code></p>
+<p><code>POST http://baseurl/api/contract/:id/payment</code></p>
 
 <table><thead>
 <tr>
@@ -1358,7 +1358,7 @@ http://baseurl/contract/:id/payment <span class="se">\</span>
 <h2 id='final-agreement'>Final Agreement</h2>
 <p>This API is used for the final agreement of the contract.</p>
 <pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
-http://baseurl/contract/:id/final <span class="se">\</span>
+http://baseurl/api/contract/:id/final <span class="se">\</span>
 -H <span class="s1">'accept: application/json'</span> <span class="se">\</span>
 -H <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
 -H <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
@@ -1375,7 +1375,7 @@ http://baseurl/contract/:id/final <span class="se">\</span>
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
-<p><code>POST http://baseurl/contract/:id/final</code></p>
+<p><code>POST http://baseurl/api/contract/:id/final</code></p>
 
 <table><thead>
 <tr>
