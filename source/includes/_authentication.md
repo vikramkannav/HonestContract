@@ -85,11 +85,14 @@ http://baseurl/api/signin \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d '{
-"user" :{
-"email": "vikmar@gmail.com",
-"password" :"********",
+{
+	"user":{
+		"email":"vikmar@gmail.com",
+		"password":"abers56"
+	}
 }
-}'
+}
+'
 
  ```
 
