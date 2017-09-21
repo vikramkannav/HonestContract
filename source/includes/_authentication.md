@@ -11,10 +11,12 @@ This API is used for the Signup with HonestContract application with some inform
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
 -d '{
-"user" :{
-"fname":"rajeshkumar",
-"email": "rajeshkumar@gmail.com",
-"password":"******"
+{
+	"user":{
+		"fname": "vikram",
+		"email":"vikmar@gmail.com",
+		"password":"abers56"
+		"password":"******"
 }
 }'
 ```
@@ -170,24 +172,27 @@ http://baseurl/api/signin \
 ```json
 {
 	"user": {
-		"fname": "rajeshkumar",
-		"lname": "",
-		"company_name": "",
-		"company_title": "",
-		"street": "",
-		"unit": "",
-		"street_name": "",
-		"city": "",
-		"state": "",
-		"country": "",
-		"pin": "",
-		"email": "",
-		"phone": "",
-		"fax": ""
-     	},
-     	"refresh_token": "ABCABCABC",
-        "auth_token": "DEFDEFDEF"
-}	
+		"id": 57,
+		"fname": "vikram",
+		"lname": null,
+		"company_name": null,
+		"company_title": null,
+		"street": null,
+		"unit": null,
+		"street_name": null,
+		"city": null,
+		"state": null,
+		"country": null,
+		"pin": null,
+		"email": "vikamsharma@gmail.com",
+		"phone": null,
+		"fax": null,
+		"created_at": "2017-09-21 11:32:55",
+		"updated_at": "2017-09-21 11:32:55"
+	},
+	"access_token": "ABCABCABC",
+    "refresh_token": "DEFDEFDEF"
+}
 ```
 ```json
 {
@@ -234,23 +239,26 @@ http://baseurl/api/signin \
 ```json
 {
 	"user": {
-		"fname": "rajeshkumar",
-		"lname": "",
-		"company_name": "",
-		"company_title": "",
-		"street": "",
-		"unit": "",
-		"street_name": "",
-		"city": "",
-		"state": "",
-		"country": "",
-		"pin": "",
-		"email": "",
-		"phone": "",
-		"fax": ""	
+		"id": 57,
+		"fname": "vikram",
+		"lname": null,
+		"company_name": null,
+		"company_title": null,
+		"street": null,
+		"unit": null,
+		"street_name": null,
+		"city": null,
+		"state": null,
+		"country": null,
+		"pin": null,
+		"email": "vikamsharma@gmail.com",
+		"phone": null,
+		"fax": null,
+		"created_at": "2017-09-21 11:32:55",
+		"updated_at": "2017-09-21 11:32:55"
 	},
-	"refresh_token": "ABCABCABC",
-     "auth_token": "DEFDEFDEF"
+	"access_token": "ABCABCABC",
+    "refresh_token": "DEFDEFDEF"
 }
 ```
 
@@ -339,23 +347,26 @@ This API is used for retrieve access token.
 ```json
 {
 	"user": {
-		"fname": "Rajesh",
-		"lname": "Kumar",
-		"company_name": "Sony",
-		"company_title": "Sony",
-		"street": "44",
-		"unit": "24",
-		"street_name": "Sec 24",
-		"city": "Gurgaon",
-		"state": "Haryana",
-		"country": "India",
-		"pin": "110021",
-		"email": "rajesh@gmail.com",
-		"phone": "9898989898",
-		"fax": "011-234446"
-    	},
-     "refresh_token": "NARNARNAR",
-     "auth_token": "DEFDEFDEF" 
+		"id": 57,
+		"fname": "vikram",
+		"lname": null,
+		"company_name": null,
+		"company_title": null,
+		"street": null,
+		"unit": null,
+		"street_name": null,
+		"city": null,
+		"state": null,
+		"country": null,
+		"pin": null,
+		"email": "vikamsharma@gmail.com",
+		"phone": null,
+		"fax": null,
+		"created_at": "2017-09-21 11:32:55",
+		"updated_at": "2017-09-21 11:32:55"
+	},
+	"access_token": "ABCABCABC",
+    "refresh_token": "DEFDEFDEF"
 }
 ```
 
