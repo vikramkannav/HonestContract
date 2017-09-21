@@ -24,23 +24,26 @@ This API is used for the Signup with HonestContract application with some inform
 ```json
 {
 	"user": {
-		"fname": "rajeshkumar",
-		"lname": "",
-		"company_name": "",
-		"company_title": "",
-		"street": "",
-		"unit": "",
-		"street_name": "",
-		"city": "",
-		"state": "",
-		"country": "",
-		"pin": "",
-		"email": "",
-		"phone": "",
-		"fax": ""       
+		"id": 57,
+		"fname": "vikram",
+		"lname": null,
+		"company_name": null,
+		"company_title": null,
+		"street": null,
+		"unit": null,
+		"street_name": null,
+		"city": null,
+		"state": null,
+		"country": null,
+		"pin": null,
+		"email": "vikamsharma@gmail.com",
+		"phone": null,
+		"fax": null,
+		"created_at": "2017-09-21 11:32:55",
+		"updated_at": "2017-09-21 11:32:55"
 	},
-	 "refresh_token": "ABCABCABC",
-      "auth_token": "DEFDEFDEF"
+	"access_token": "ABCABCABC",
+    "refresh_token": "DEFDEFDEF"
 }
 ```
 
@@ -66,7 +69,6 @@ Parameter | Type    | Description | Required
 fname     | string   | Name of the user | true
 email     | string  | Email address of the user | true
 password  |  string | Password of the user | true
-confirm_password  |  string | Password of the user | true
 
 
 <aside class="success">Status code :200 OK </aside>
@@ -84,7 +86,7 @@ http://baseurl/api/signin \
 -H 'content-type: application/json' \
 -d '{
 "user" :{
-"email": "rajeshkumar@gmail.com",
+"email": "vikmar@gmail.com",
 "password" :"********",
 }
 }'
@@ -97,23 +99,26 @@ http://baseurl/api/signin \
 ```json
 {
 	"user": {
-		"fname": "rajeshkumar",
-		"lname": "",
-		"company_name": "",
-		"company_title": "",
-		"street": "",
-		"unit": "",
-		"street_name": "",
-		"city": "",
-		"state": "",
-		"country": "",
-		"pin": "",
-		"email": "",
-		"phone": "",
-		"fax": ""
-		},
-	"refresh_token": "ABCABCABC",
-    "auth_token": "DEFDEFDEF"
+		"id": 57,
+		"fname": "vikram",
+		"lname": null,
+		"company_name": null,
+		"company_title": null,
+		"street": null,
+		"unit": null,
+		"street_name": null,
+		"city": null,
+		"state": null,
+		"country": null,
+		"pin": null,
+		"email": "vikmar@gmail.com",
+		"phone": null,
+		"fax": null,
+		"created_at": "2017-09-21 11:32:55",
+		"updated_at": "2017-09-21 11:32:55"
+	},
+	"access_token": "ABCABCABC",
+    "refresh_token": "DEFDEFDEF"
 }
 ```
 
