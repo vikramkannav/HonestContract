@@ -6,7 +6,7 @@ This API is used for the Signup with HonestContract application with some inform
 
 ```shell
  curl -X POST \
- http://baseurl/signup \
+ http://baseurl/api/signup \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -59,7 +59,7 @@ This API is used for the Signup with HonestContract application with some inform
 
 ### HTTP Request
 
-`POST http://baseurl/signup`
+`POST http://baseurl/api/signup`
 
 
 Parameter | Type    | Description | Required
@@ -79,7 +79,7 @@ This API is used for the login with email and password.
 
 ```shell
 curl -X POST \
-http://baseurl/signin \
+http://baseurl/api/signin \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -129,7 +129,7 @@ http://baseurl/signin \
 
 ### HTTP Request
 
-`POST http://baseurl/signin`
+`POST http://baseurl/api/signin`
 
 
 Parameter | Type    | Description | Required
@@ -146,7 +146,7 @@ This API is used for login with Facebook.
 
 ```shell
 curl -X POST \
-http://baseurl/signin \
+http://baseurl/api/signin \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -194,7 +194,7 @@ http://baseurl/signin \
 
 ### HTTP Request
 
-`POST http://baseurl/signin`
+`POST http://baseurl/api/signin`
 
 
 Parameter | Type    | Description | Required
@@ -211,7 +211,7 @@ This API is used for login with Google.
 
 ```shell
 curl -X POST \
-http://baseurl/signin \
+http://baseurl/api/signin \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -253,7 +253,7 @@ http://baseurl/signin \
 
 ### HTTP Request
 
-`POST http://baseurl/signin`
+`POST http://baseurl/api/signin`
 
 Parameter | Type    | Description | Required 
 --------- | ------- | ----------- |----------
@@ -269,7 +269,7 @@ This API is used for forgot password.
 
 ```shell
 curl -X POST \
-http://baseurl/reset-password\
+http://baseurl/api/reset-password\
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -300,7 +300,7 @@ http://baseurl/reset-password\
 
 ### HTTP Request
 
-`POST http://baseurl/reset-password`
+`POST http://baseurl/api/reset-password`
 
 
 Parameter | Type    | Description | Required 
@@ -317,7 +317,7 @@ This API is used for retrieve access token.
 
 ```shell
  curl -X POST \
- http://baseurl/refresh_token \
+ http://baseurl/api/refresh_token \
  -H 'accept: application/json' \
  -H 'cache-control: no-cache' \
  -H 'content-type: application/json' \
@@ -359,7 +359,7 @@ This API is used for retrieve access token.
 
 ### HTTP Request
 
-`POST http://baseurl/refresh_token`
+`POST http://baseurl/api/refresh_token`
 
 
 Parameter | Type    | Description | Required 

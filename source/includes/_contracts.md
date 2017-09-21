@@ -5,7 +5,7 @@ With this API he/she can create his/her contract through his/her company.
 
 ```shell
 curl -X POST \
-http://baseurl/contract \
+http://baseurl/api/contract \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -38,7 +38,7 @@ http://baseurl/contract \
 
 ### HTTP Request
 
-`POST http://baseurl/contract`
+`POST http://baseurl/api/contract`
 
 
 Parameter | Type    | Description | Required
@@ -57,7 +57,7 @@ This API is used for the contracts list of the he/she (user).
 
 ```shell
 curl -X GET \
-http://baseurl/contracts \
+http://baseurl/api/contracts \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -92,7 +92,7 @@ http://baseurl/contracts \
 
 ### HTTP Request
 
-`GET http://baseurl/contracts`
+`GET http://baseurl/api/contracts`
 
 
 Parameter | Type    | Description | Required
@@ -109,7 +109,7 @@ This API is used for create the purpose.
 
 ```shell
 curl -X POST \
-http://baseurl/contract/:id/purpose \
+http://baseurlapi/contract/:id/purpose \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -139,7 +139,7 @@ http://baseurl/contract/:id/purpose \
 
 ### HTTP Request
 
-`POST http://baseurl/contract/:id/purpose`
+`POST http://baseurl/api/contract/:id/purpose`
 
 
 Parameter | Type    | Description | Required
@@ -159,7 +159,7 @@ This API is used for product and price of the contract.
 
 ```shell
 curl -X POST \
-http://baseurl/contract/:id/product_price \
+http://baseurl/api/contract/:id/product_price \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -200,7 +200,7 @@ http://baseurl/contract/:id/product_price \
 
 ### HTTP Request
 
-`POST http://baseurl/contract/:id/product_price`
+`POST http://baseurl/api/contract/:id/product_price`
 
 
 Parameter | Type    | Description | Required 
@@ -226,7 +226,7 @@ This API is used for payment of the contract.
 
 ```shell
 curl -X POST \
-http://baseurl/contract/:id/payment \
+http://baseurl/api/contract/:id/payment \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -259,7 +259,7 @@ http://baseurl/contract/:id/payment \
 
 ### HTTP Request
 
-`POST http://baseurl/contract/:id/payment`
+`POST http://baseurl/api/contract/:id/payment`
 
 Parameter | Type    | Description | Required 
 --------- | ------- | ----------- |--------
@@ -281,7 +281,7 @@ This API is used for shiping of the contract.
 
 ```shell
 curl -X POST \
-http://baseurl/contract/:id/payment \
+http://baseurl/api/contract/:id/payment \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -322,7 +322,7 @@ http://baseurl/contract/:id/payment \
 
 ### HTTP Request
 
-`POST http://baseurl/contract/:id/payment`
+`POST http://baseurl/api/contract/:id/payment`
 
 
 Parameter | Type    | Description | Required 
@@ -349,7 +349,7 @@ This API is used for the final agreement of the contract.
 
 ```shell
 curl -X POST \
-http://baseurl/contract/:id/final \
+http://baseurl/api/contract/:id/final \
 -H 'accept: application/json' \
 -H 'cache-control: no-cache' \
 -H 'content-type: application/json' \
@@ -370,7 +370,7 @@ http://baseurl/contract/:id/final \
 
 ### HTTP Request
 
-`POST http://baseurl/contract/:id/final`
+`POST http://baseurl/api/contract/:id/final`
 
 
 Parameter | Type    | Description | Required 
