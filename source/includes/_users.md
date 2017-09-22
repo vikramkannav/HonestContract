@@ -70,8 +70,8 @@ fname     | string | First name of the user | true
 lname     | string  | Last name of the user | true
 company_name| string | Company name          | true
 company_title| string | Title of the company  | true
-street    |integer     | Street number of the company |true
-unit      | integer    | Unit of the company |true
+street    |string     | Street number of the company |true
+unit      | string    | Unit of the company |true
 street_name | string  | Street name of the company |true 
 city      |  string | City nameof the company | true
 state     |  string | State name of the company  | true
@@ -79,8 +79,8 @@ country   | string  | Country name of the Company | true
 pin       |  int    | Postal code of the company | true
 email     | string  | Email address of the user | true
 password  |  string | Password of the user | true
-phone     |  int    | phone number of the user | true
-fax       | int     | Fax number of the company |strue
+phone     |  string    | phone number of the user | true
+fax       | string     | Fax number of the company |strue
 
 
 <aside class="success">Status code :200 OK </aside>
